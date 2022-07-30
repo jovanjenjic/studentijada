@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import parse from 'html-react-parser';
 
 import { getComments } from '../services';
@@ -29,7 +29,7 @@ const Comments = ({ slug }) => {
                   {' '}
                   on
                   {' '}
-                  {moment(comment.createdAt).format('MMM DD, YYYY')}
+                  {dayjs(comment.createdAt).format('MMM DD, YYYY')}
                 </p>
                 <p className="whitespace-pre-line text-gray-600 w-full">{parse(comment.comment)}</p>
               </div>
