@@ -13,12 +13,12 @@ const SaidAboutUs = () => {
   }, []);
 
   return (
-    <div class="antialiased w-full h-full bg-transparent text-gray-400 font-inter p-10">
+    <div class="antialiased w-full h-full bg-transparent text-gray-400 font-inter p-10 mb-20">
       <div class="container px-4 mx-auto">
         <div>
           <div id="title" class="text-center my-10">
-            <h1 class="font-bold text-4xl text-white">Said About Us</h1>
-            <p class="text-light text-gray-500 text-xl">
+            <h1 class="font-bold text-4xl text-white">Rekli su o nama</h1>
+            <p class="text-light text-gray-200 text-xl">
               Here are our pricing plans
             </p>
           </div>

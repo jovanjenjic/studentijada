@@ -12,3 +12,7 @@ export { default as Loader } from './Loader';
 export { default as Footer } from './Footer';
 export { default as AskForm } from './AskForm';
 export { default as SaidAboutUs } from './SaidAboutUs';
+export { default as Content } from './Content';
+export { default as LandingComponent } from './LandingComponent';
+export { default as Description } from './Description';
+export { default as Timer } from './TImer';

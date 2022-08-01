@@ -1,11 +1,16 @@
-import { AskForm, SaidAboutUs } from '../components';
+import { AskForm, SaidAboutUs, Content, LandingComponent, Description } from '../components';
 import { getPosts } from '../services';
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-10 mb-8">
-      <SaidAboutUs />
-      <AskForm />
+    <div>
+      <LandingComponent />
+      <div className="container mx-auto px-10 mb-8">
+        <Description />
+        <Content />
+        <SaidAboutUs />
+        <AskForm />
+      </div>
     </div>
   );
 }
