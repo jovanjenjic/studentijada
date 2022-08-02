@@ -17,7 +17,7 @@ const LandingComponent = () => {
 
   return (
     <div className="w-full">
-        <div className="flex bg-white" style={{ height: '80vh', clipPath: 'polygon(0 0, 100% 0%, 100% 93%, 0 100%)'}}>
+        <div className="flex bg-blue-50" style={{ height: '80vh', clipPath: 'polygon(0 0, 100% 0%, 100% 93%, 0 100%)'}}>
             <div className="flex items-start text-center lg:text-left px-8 md:px-12 lg:w-1/2">
                 <div className="flex flex-col justify-evenly h-5/6">
                   <Timer />
@@ -32,9 +32,8 @@ const LandingComponent = () => {
                 </div>
             </div>
             <div className="hidden lg:block lg:w-1/2" style={{ clipPath: 'polygon(12% 0, 100% 0%, 100% 100%, 0 100%)'}}>
-                <div className="h-full object-cover" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1352&q=80)'}}>
+                    <img className="h-full" src="https://setplan2021.eu/wp-content/uploads/2021/09/SET-PLAN_750-x-500_web-foto_20212-800x600.jpg" />
                     <div className="h-full bg-black opacity-25"></div>
-                </div>
             </div>
         </div>
         <section className="pb-10 bg-blueGray-200 -mt-24">

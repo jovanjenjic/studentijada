@@ -13,156 +13,141 @@ const SaidAboutUs = () => {
   }, []);
 
   return (
-    <div class="antialiased w-full h-full bg-transparent text-gray-400 font-inter p-10 mb-20">
-      <div class="container px-4 mx-auto">
+    <div className="antialiased w-full h-full text-gray-400 font-inter p-10 mb-20">
+      <div className="container px-4 mx-auto">
         <div>
-          <div id="title" class="text-center my-10">
-            <h1 class="font-bold text-4xl text-white">Rekli su o nama</h1>
-            <p class="text-light text-gray-200 text-xl">
+          <div id="title" className="text-center my-10">
+            <h1 className="font-bold text-4xl text-white">Rekli su o nama</h1>
+            <p className="text-light text-gray-200 text-xl">
               Here are our pricing plans
             </p>
           </div>
           <div
-            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10 pt-10"
+            className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10 pt-10"
           >
-            <div
-              id="plan"
-              class="bg-white rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
-            >
-              <div id="title" class="w-full py-5 border-b border-gray-800">
-                <h2 class="font-bold text-3xl text-white">Startup</h2>
-                <h3 class="font-normal text-indigo-500 text-xl mt-2">
-                  Aleksandar Okiljevic
-                </h3>
-              </div>
-              <div id="content" class="">
-                <div id="icon" class="my-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-12 w-12 mx-auto fill-stroke text-indigo-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                  <p class="text-gray-500 text-sm pt-2">
-                    Perfect individuals or startups
-                  </p>
-                </div>
-                <div id="contain" class="leading-8 mb-10 text-lg font-light">
-                  <ul>
-                    <li>10 hours of support</li>
-                    <li>128MB of storage</li>
-                    <li>2048MB bandwith</li>
-                    <li>Subdomain included</li>
-                  </ul>
-                  <div id="choose" class="w-full mt-10 px-6">
-                    <a
-                      href="#"
-                      class="w-full block bg-gray-900 font-medium text-xl py-4 rounded-xl hover:shadow-lg transition duration-200 ease-in-out hover:bg-indigo-600 hover:text-white"
-                      >Choose</a>
-                    
+            <div className="card ">
+              <div className="card__side card__side--front">
+                <card className="relative h-[30rem] sm:h-96 w-[35rem]">
+                  <img src="https://picsum.photos/seed/1840/1000/600" className="object-cover w-full h-full" />
+                  <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/10 flex flex-col items-center justify-center text-center">
+                      <img src="https://github.githubassets.com/images/modules/site/enterprise/launchpad/logos/logo-dowjones.svg" />
+                      <p className="text-lg px-14 text-gray-300 mt-10">
+                        GitHub helps us ensure that we have our security controls baked into our pipelines all the way from the first line of code we’re writing.
+                      </p>
+                      <img src="https://picsum.photos/50/50" className="rounded-full border-2 mt-8" />
+                      <p className="text-base font-bold px-14 text-gray-300 mt-3">
+                        Chief Information Security Officer
+                      </p>
+                      <p className="text-sm font-light px-14 text-gray-300 ">
+                        Aleksandar Okiljevic
+                      </p>
                   </div>
+                </card>
+              </div>
+              <div className="card__side card__side--back card__side--back-1">
+                <div className="flex flex-col justify-around col-span-6 bg-opacity-50 border border-gray-100 rounded shadow-lg cursor-pointer bg-gradient-to-b from-gray-200 backdrop-blur-20 to-gray-50 md:col-span-3 lg:col-span-2 h-full">
+                      <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
+                          <img className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                              src="https://picsum.photos/200" />
+
+                      </div>
+                      <div className="mb-5 border-t border-gray-50">
+                          <div className="flex flex-wrap justify-start mx-5 mt-6 text-xs sm:justify-center ">
+                              <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Sales:<div
+                                      className="ml-1 text-gray-500 text-ms"> 30k</div>
+                              </div>
+                              <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Recipies: <div
+                                      className="ml-1 text-gray-500 text-ms"> 60k</div>
+                              </div>
+                              <div className="flex mb-2 mr-4 text-gray-700 ">Customers: <div
+                                      className="ml-1 text-gray-500 text-ms"> 120k</div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div className="card">
+              <div className="card__side card__side--front">
+                <card className="relative h-[30rem] sm:h-96 w-[35rem]">
+                  <img src="https://picsum.photos/seed/1840/1000/600" className="object-cover w-full h-full" />
+                  <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/80 flex flex-col items-center justify-center text-center">
+                      <img src="https://github.githubassets.com/images/modules/site/enterprise/launchpad/logos/logo-dowjones.svg" />
+                      <p className="text-lg px-14 text-gray-300 mt-10">
+                        GitHub helps us ensure that we have our security controls baked into our pipelines all the way from the first line of code we’re writing.
+                      </p>
+                      <img src="https://picsum.photos/50/50" className="rounded-full border-2 mt-8" />
+                      <p className="text-base font-bold px-14 text-gray-300 mt-3">
+                        Chief Information Security Officer
+                      </p>
+                      <p className="text-sm font-light px-14 text-gray-300 ">
+                        Nikola Mandic
+                      </p>
+                  </div>
+                </card>
+              </div>
+              <div className="card__side card__side--back card__side--back-2">
+              <div className="flex flex-col justify-around col-span-6 bg-opacity-50 border border-gray-100 rounded shadow-lg cursor-pointer bg-gradient-to-b from-gray-200 backdrop-blur-20 to-gray-50 md:col-span-3 lg:col-span-2 h-full">
+                    <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
+                        <img className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                            src="https://picsum.photos/200" />
+
+                    </div>
+                    <div className="mb-5 border-t border-gray-50">
+                        <div className="flex flex-wrap justify-start mx-5 mt-6 text-xs sm:justify-center ">
+                            <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Sales:<div
+                                    className="ml-1 text-gray-500 text-ms"> 30k</div>
+                            </div>
+                            <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Recipies: <div
+                                    className="ml-1 text-gray-500 text-ms"> 60k</div>
+                            </div>
+                            <div className="flex mb-2 mr-4 text-gray-700 ">Customers: <div
+                                    className="ml-1 text-gray-500 text-ms"> 120k</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
-            <div
-              id="plan"
-              class="bg-white rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
-            >
-              <div id="title" class="w-full py-5 border-b border-gray-800">
-                <h2 class="font-bold text-3xl text-white">Corporate</h2>
-                <h3 class="font-normal text-indigo-500 text-xl mt-2">
-                  Mladen Popara
-                </h3>
-              </div>
-              <div id="content" class="">
-                <div id="icon" class="my-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-12 w-12 mx-auto fill-stroke text-indigo-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
-                    />
-                  </svg>
-                  <p class="text-gray-500 text-sm pt-2">
-                    Perfect for teams up to 12 people
-                  </p>
-                </div>
-                <div id="contain" class="leading-8 mb-10 text-lg font-light">
-                  <ul>
-                    <li>10 hours of support</li>
-                    <li>1024MB of storage</li>
-                    <li>4GB bandwith</li>
-                    <li>Domain included</li>
-                  </ul>
-                  <div id="choose" class="w-full mt-10 px-6">
-                    <a
-                      href="#"
-                      class="w-full block bg-gray-900 font-medium text-xl py-4 rounded-xl hover:shadow-lg transition duration-200 ease-in-out hover:bg-indigo-600 hover:text-white"
-                      >Choose</a>
-                    
+            <div className="card">
+              <div className="card__side card__side--front">
+                <card className="relative h-[30rem] sm:h-96 w-[35rem]">
+                  <img src="https://picsum.photos/seed/1840/1000/600" className="object-cover w-full h-full" />
+                  <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/80 flex flex-col items-center justify-center text-center">
+                      <img src="https://github.githubassets.com/images/modules/site/enterprise/launchpad/logos/logo-dowjones.svg" />
+                      <p className="text-lg px-14 text-gray-300 mt-10">
+                        GitHub helps us ensure that we have our security controls baked into our pipelines all the way from the first line of code we’re writing.
+                      </p>
+                      <img src="https://picsum.photos/50/50" className="rounded-full border-3 mt-8" />
+                      <p className="text-base font-bold px-14 text-gray-300 mt-3">
+                        Chief Information Security Officer
+                      </p>
+                      <p className="text-sm font-light px-14 text-gray-300 ">
+                        Mladen Popara
+                      </p>
                   </div>
-                </div>
+                </card>
               </div>
-            </div>
-            <div
-              id="plan"
-              class="bg-white rounded-lg text-center overflow-hidden w-full transform hover:shadow-2xl hover:scale-105 transition duration-200 ease-in"
-            >
-              <div id="title" class="w-full py-5 border-b border-gray-800">
-                <h2 class="font-bold text-3xl text-white">Enterprise</h2>
-                <h3 class="font-normal text-indigo-500 text-xl mt-2">
-                  Nikola Mandic
-                </h3>
-              </div>
-              <div id="content" class="">
-                <div id="icon" class="my-5">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-12 w-12 mx-auto fill-stroke text-indigo-600"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="1"
-                      d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                    />
-                  </svg>
-                  <p class="text-gray-500 text-sm pt-2">
-                    Perfect large scale team
-                  </p>
-                </div>
-                <div id="contain" class="leading-8 mb-10 text-lg font-light">
-                  <ul>
-                    <li>10 hours of support</li>
-                    <li>10GB of storage</li>
-                    <li>100GB bandwith</li>
-                    <li>Domain included</li>
-                  </ul>
-                  <div id="choose" class="w-full mt-10 px-6">
-                    <a
-                      href="#"
-                      class="w-full block bg-gray-900 font-medium text-xl py-4 rounded-xl hover:shadow-lg transition duration-200 ease-in-out hover:bg-indigo-600 hover:text-white"
-                      >Choose</a>
-                    
-                  </div>
+              <div className="card__side card__side--back card__side--back-3">
+              <div className="flex flex-col justify-around col-span-6 bg-opacity-50 border border-gray-100 rounded shadow-lg cursor-pointer bg-gradient-to-b from-gray-200 backdrop-blur-20 to-gray-50 md:col-span-3 lg:col-span-2 h-full">
+                    <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
+                        <img className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                            src="https://picsum.photos/200" />
+
+                    </div>
+                    <div className="mb-5 border-t border-gray-50">
+                        <div className="flex flex-wrap justify-start mx-5 mt-6 text-xs sm:justify-center ">
+                            <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Sales:<div
+                                    className="ml-1 text-gray-500 text-ms"> 30k</div>
+                            </div>
+                            <div className="flex mb-2 mr-4 font-normal text-gray-700 ">Recipies: <div
+                                    className="ml-1 text-gray-500 text-ms"> 60k</div>
+                            </div>
+                            <div className="flex mb-2 mr-4 text-gray-700 ">Customers: <div
+                                    className="ml-1 text-gray-500 text-ms"> 120k</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
               </div>
             </div>
