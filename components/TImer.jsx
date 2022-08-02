@@ -19,7 +19,7 @@ function MyTimer({ expiryTimestamp }) {
       <div className="flex flex flex-wrap flex-row items-center justify-between">
         <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
           <span
-            className="font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+            className="bg-white font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
             id="days"
           >
             {dayTime}
@@ -29,7 +29,7 @@ function MyTimer({ expiryTimestamp }) {
 
         <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
           <span
-            className="font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+            className="bg-white  font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
             id="hours"
           >
             {hourTime}
@@ -39,7 +39,7 @@ function MyTimer({ expiryTimestamp }) {
 
         <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
           <span
-            className="font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+            className="bg-white  font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
             id="minutes"
           >
             {minuteTime}
@@ -49,7 +49,7 @@ function MyTimer({ expiryTimestamp }) {
 
         <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
           <span
-            className="font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+            className="bg-white font-semibold time-elem relative w-20 h-20 xl:w-36 lg:w-32 md:w-24 sm:w-20 xl:h-36 lg:h-32 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
             id="seconds"
           >
             {secondTime}
