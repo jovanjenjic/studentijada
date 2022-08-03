@@ -4,11 +4,10 @@ import dayjs from 'dayjs';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
-
 import { grpahCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
-  <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+  <motion.div initial={{ x: -160, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.5 }}>
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img src={post.featuredImage.url} alt="" className="object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
