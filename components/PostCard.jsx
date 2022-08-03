@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 import { grpahCMSImageLoader } from '../util';
 
 const PostCard = ({ post }) => (
-  <motion.div exit={{ opacity: 0 }}>
+  <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
     <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md pb-80 mb-6">
         <img src={post.featuredImage.url} alt="" className="object-top absolute h-80 w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
