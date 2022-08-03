@@ -37,7 +37,7 @@ const LandingComponent = () => {
             </div>
         </div>
         <section className="pb-10 bg-blueGray-200 -mt-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 ">
           <div className="flex flex-wrap">
             <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-inner rounded-lg">

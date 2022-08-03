@@ -1,5 +1,6 @@
 import React from 'react';
 import { useRouter } from 'next/router';
+import { motion } from 'framer-motion';
 
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components';
 import { getPosts, getPostDetails } from '../../services';
@@ -13,7 +14,7 @@ const PostDetails = ({ post }) => {
   }
 
   return (
-    <>
+    <motion.div exit={{ opacitiy: 0}}>
       <div className="container mx-auto px-10 my-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">
@@ -31,7 +32,7 @@ const PostDetails = ({ post }) => {
           </div>
         </div>
       </div>
-    </>
+    </motion.div>
   );
 };
 export default PostDetails;
