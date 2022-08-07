@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
-import imgLogo from '../public/logo.png';
+import imgLogo from '../public/logo-crni.png';
 import { getCategories } from '../services';
 
 const Header = () => {
@@ -17,8 +17,10 @@ const Header = () => {
     <nav className="bg-blue-50 shadow-lg">
         <div className="md:flex items-center justify-between py-2 px-8 md:px-12">
             <div className="flex justify-between items-center">
-              <div className="text-2xl font-bold text-gray-800 md:text-3xl">
-                    <a href="/">Brand</a>
+              <div className="text-2xl font-bold text-gray-800 md:text-3xl w-44 cursor-pointer">
+                    <Link href="/">
+                      <img src={imgLogo.src} alt='logo' />
+                    </Link>
               </div>
               <div className="md:hidden">
                   <button type="button" className="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
@@ -29,12 +31,12 @@ const Header = () => {
                   </button>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row hidden md:block -mx-2 mb-auto">
+            <div className="flex flex-col md:flex-row hidden md:block -mx-2 my-auto">
               {categories.map((category, index) => (
-                <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer">{category.name}</span></Link>
+                <Link key={index} href={`/category/${category.slug}`}><span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer my-auto mt-0">{category.name}</span></Link>
               ))}
               <Link href={'/post'}>
-                <span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer">
+                <span className="md:float-right mt-2 align-middle text-black ml-4 font-semibold cursor-pointer my-auto mt-0">
                   Posts
                 </span>
               </Link>    
