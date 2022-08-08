@@ -1,7 +1,7 @@
 import { AskForm, SaidAboutUs, Content, LandingComponent, Description } from '../components';
 import { getPosts } from '../services';
 
-export default function Home({ posts }) {
+export default function Home() {
   return (
     <div>
       <LandingComponent />
@@ -13,12 +13,4 @@ export default function Home({ posts }) {
       </div>
     </div>
   );
-}
-
-// Fetch data at build time
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return {
-    props: { posts },
-  };
 }

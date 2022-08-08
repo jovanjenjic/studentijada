@@ -2,10 +2,10 @@ import { request, gql } from 'graphql-request';
 
 const graphqlAPI = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT;
 
-export const getPosts = async () => {
+export const getPosts = async (hide = false) => {
   const query = gql`
-    query MyQuery {
-      postsConnection {
+    query MyQuery($hide : Boolean!) {
+      postsConnection(where: {hide: $hide}, orderBy: date_DESC, first: 100) {
         edges {
           cursor
           node {
@@ -18,6 +18,7 @@ export const getPosts = async () => {
               }
             }
             createdAt
+            date
             slug
             title
             exce
@@ -34,7 +35,7 @@ export const getPosts = async () => {
     }
   `;
 
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query, { hide });
 
   return result.postsConnection.edges;
 };
@@ -88,11 +89,11 @@ export const getPostDetails = async (slug) => {
   return result.post;
 };
 
-export const getSimilarPosts = async (categories, slug) => {
+export const getSimilarPosts = async (categories, slug, hide = false) => {
   const query = gql`
-    query GetPostDetails($slug: String!, $categories: [String!]) {
+    query GetPostDetails($slug: String!, $categories: [String!], $hide: Boolean!) {
       posts(
-        where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}}
+        where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}, AND: {hide: $hide}}}
         last: 3
       ) {
         title
@@ -100,54 +101,57 @@ export const getSimilarPosts = async (categories, slug) => {
           url
         }
         createdAt
+        date
         slug
       }
     }
   `;
-  const result = await request(graphqlAPI, query, { slug, categories });
+  const result = await request(graphqlAPI, query, { slug, categories, hide });
 
   return result.posts;
 };
 
-export const getAdjacentPosts = async (createdAt, slug) => {
+export const getAdjacentPosts = async (createdAt, slug, hide = false) => {
   const query = gql`
-    query GetAdjacentPosts($createdAt: DateTime!,$slug:String!) {
+    query GetAdjacentPosts($createdAt: DateTime!, $slug:String!, $hide:Boolean!) {
       next:posts(
         first: 1
         orderBy: createdAt_ASC
-        where: {slug_not: $slug, AND: {createdAt_gte: $createdAt}}
+        where: {slug_not: $slug, AND: {createdAt_gte: $createdAt, AND: {hide: $hide}}}
       ) {
         title
         featuredImage {
           url
         }
         createdAt
+        date
         slug
       }
       previous:posts(
         first: 1
         orderBy: createdAt_DESC
-        where: {slug_not: $slug, AND: {createdAt_lte: $createdAt}}
+        where: {slug_not: $slug, AND: {createdAt_lte: $createdAt, AND: {hide: $hide}}}
       ) {
         title
         featuredImage {
           url
         }
         createdAt
+        date
         slug
       }
     }
   `;
 
-  const result = await request(graphqlAPI, query, { slug, createdAt });
+  const result = await request(graphqlAPI, query, { slug, createdAt, hide });
 
   return { next: result.next[0], previous: result.previous[0] };
 };
 
-export const getCategoryPost = async (slug) => {
+export const getCategoryPost = async (slug, hide = false) => {
   const query = gql`
-    query GetCategoryPost($slug: String!) {
-      postsConnection(where: {categories_some: {slug: $slug}}) {
+    query GetCategoryPost($slug: String!, $hide: Boolean!) {
+      postsConnection(where: {categories_some: {slug: $slug}, hide: $hide}) {
         edges {
           cursor
           node {
@@ -160,6 +164,7 @@ export const getCategoryPost = async (slug) => {
               }
             }
             createdAt
+            date
             slug
             title
             exce
@@ -176,15 +181,15 @@ export const getCategoryPost = async (slug) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query, { slug });
+  const result = await request(graphqlAPI, query, { slug, hide });
 
   return result.postsConnection.edges;
 };
 
-export const getFeaturedPosts = async () => {
+export const getFeaturedPosts = async (hide = false) => {
   const query = gql`
-    query GetCategoryPost() {
-      posts(where: {featuredPost: true}) {
+    query GetCategoryPost($hide: Boolean!) {
+      posts(where: {featuredPost: true, hide: $hide}) {
         author {
           name
           photo {
@@ -197,11 +202,12 @@ export const getFeaturedPosts = async () => {
         title
         slug
         createdAt
+        date
       }
     }   
   `;
 
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query, { hide });
 
   return result.posts;
 };
@@ -246,11 +252,12 @@ export const getComments = async (slug) => {
   return result.comments;
 };
 
-export const getRecentPosts = async () => {
+export const getRecentPosts = async (hide = false) => {
   const query = gql`
-    query GetPostDetails() {
+    query GetPostDetails($hide: Boolean!) {
       posts(
-        orderBy: createdAt_ASC
+        where: {hide:$hide}
+        orderBy: date_ASC
         last: 3
       ) {
         title
@@ -258,11 +265,12 @@ export const getRecentPosts = async () => {
           url
         }
         createdAt
+        date
         slug
       }
     }
   `;
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query, { hide });
 
   return result.posts;
 }

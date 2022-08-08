@@ -87,7 +87,7 @@ const SaidAboutUs = () => {
                     <p className="text-lg px-14 text-gray-900 mt-10">
                       Veoma kompetentna i kompletna podrška od planiranja do realizacije. Postupanje sa nama kao i ispunjavanje naših visokih zahteva i očekivanja iznenadilo nas je veoma pozitivno i odražava se u konačnom rezultatu saradnje.
                     </p>
-                    <img width='58' src="https://www.codeference.org/popi.a9d1b3ba.png" className="rounded-full border-2 mt-8" />
+                    <img width='58' src="https://www.codeference.org/kilje03.4b96426d.jpg" className="rounded-full border-2 mt-8" />
                     <p className="text-base font-bold px-14 text-gray-900 mt-3">
                       CTO Positive Tech It
                     </p>
