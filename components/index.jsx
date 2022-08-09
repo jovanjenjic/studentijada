@@ -17,3 +17,4 @@ export { default as LandingComponent } from './LandingComponent';
 export { default as Description } from './Description';
 export { default as Timer } from './TImer';
 export { default as ApplicationForm } from './ApplicationForm';
+export { default as HamburgerMenu } from './HamburgerMenu';

@@ -6,7 +6,7 @@ const Description = () => {
       <div className="container m-auto px-6 md:px-12 xl:px-6">
           <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
             <div className="md:5/12 lg:w-5/12">
-              <motion.img initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://www.pngmart.com/files/About-Us-PNG-Free-Download.png" alt="image" loading="lazy" width="" height="" />
+              <motion.img initial={{ x: 30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://www.pngmart.com/files/About-Us-PNG-Free-Download.png" alt="image" loading="lazy" width="" height="" />
             </div>
             <div className="md:7/12 lg:w-6/12">
               <h2 className="text-2xl text-white font-bold md:text-4xl">O nama</h2>
@@ -23,14 +23,14 @@ const Description = () => {
               <p className="mt-4 text-white">Pored ovih ozbiljnih stvari nam je i cilj da se dobro provedeš i upoznaš nove prijatelje i buduće kolege za ceo život.</p>
             </div>
             <div className="md:5/12 lg:w-5/12">
-              <motion.img initial={{ x: -100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://qq.co.id/wp-content/uploads/2019/04/kisspng-clip-art-recruitment-vector-graphics-illustration-philips-metal-industries-careers-5c648684496bc9.4283209715500919083007-982x780.png" alt="image" loading="lazy" width="" height="" />
+              <motion.img initial={{ x: -30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://qq.co.id/wp-content/uploads/2019/04/kisspng-clip-art-recruitment-vector-graphics-illustration-philips-metal-industries-careers-5c648684496bc9.4283209715500919083007-982x780.png" alt="image" loading="lazy" width="" height="" />
             </div>
           </div>
       </div>
       <div className="container m-auto px-6 md:px-12 xl:px-6">
           <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
             <div className="md:5/12 lg:w-5/12">
-              <motion.img initial={{ x: 100, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://user-images.githubusercontent.com/762297/59157609-ca692180-8ad7-11e9-88ab-552f8e88a202.png" alt="image" loading="lazy" width="" height="" />
+              <motion.img initial={{ x: 30, opacity: 0 }} animate={{ x: 0, opacity: 1 }} transition={{ delay: 0.4 }} src="https://user-images.githubusercontent.com/762297/59157609-ca692180-8ad7-11e9-88ab-552f8e88a202.png" alt="image" loading="lazy" width="" height="" />
             </div>
             <div className="md:7/12 lg:w-6/12">
               <h2 className="text-2xl text-white font-bold md:text-4xl">Misija</h2>
