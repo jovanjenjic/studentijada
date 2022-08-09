@@ -17,11 +17,11 @@ function MyTimer({ expiryTimestamp }) {
 
   return (
     <div className="container max-w-3xl mx-auto">
-      <div className="flex flex-wrap flex-row items-center justify-between">
+      <div className="flex flex-wrap flex-row items-center justify-evenly">
         <motion.div initial={{ y: 160, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 }}>
-          <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
-              className="bg-white font-semibold time-elem relative w-20 h-20 xl:w-32 lg:w-30 md:w-24 sm:w-20 xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+              className="bg-white font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-5 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
               id="days"
             >
               {dayTime}
@@ -30,9 +30,9 @@ function MyTimer({ expiryTimestamp }) {
           </div>
         </motion.div>
         <motion.div initial={{ y: 120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
-          <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
-              className="bg-white  font-semibold time-elem relative w-20 h-20 xl:w-32 lg:w-30 md:w-24 sm:w-20 xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+              className="bg-white  font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-5 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
               id="hours"
             >
               {hourTime}
@@ -41,9 +41,9 @@ function MyTimer({ expiryTimestamp }) {
           </div>
         </motion.div>
         <motion.div initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
-          <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
-              className="bg-white  font-semibold time-elem relative w-20 h-20 xl:w-32 lg:w-30 md:w-24 sm:w-20 xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+              className="bg-white  font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-5 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
               id="minutes"
             >
               {minuteTime}
@@ -52,9 +52,9 @@ function MyTimer({ expiryTimestamp }) {
           </div>
         </motion.div>
         <motion.div initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
-          <div className="flex items-center mr-7 flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
+          <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
-              className="bg-white font-semibold time-elem relative w-20 h-20 xl:w-32 lg:w-30 md:w-24 sm:w-20 xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-5 rounded-lg xl:text-6xl lg:text-5xl md:text-4xl text-3xl"
+              className="bg-white font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-5 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
               id="seconds"
             >
               {secondTime}

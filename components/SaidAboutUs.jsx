@@ -13,14 +13,14 @@ const SaidAboutUs = () => {
   }, []);
 
   return (
-    <div className="antialiased w-full h-full text-gray-400 font-inter p-10 mb-20">
-      <div className="container px-4 mx-auto">
+    <div className="antialiased w-full h-full text-gray-400 font-inter lg:p-10 mb-20">
+      <div className="container lg:px-4 mx-auto">
         <div>
           <div id="title" className="text-center my-10">
             <h1 className="font-bold text-4xl text-white">Rekli su o nama</h1>
           </div>
           <div
-            className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-evenly gap-10 pt-10"
+            className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-evenly gap-10 pt-10"
           >
             <div className="card">
               <div className="card__side card__side--front">
@@ -46,7 +46,7 @@ const SaidAboutUs = () => {
                   <img src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64=" className="object-cover w-full h-full" />
                   <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/10 flex flex-col items-center justify-center text-center">
                     <img src={commentImg.src} alt='icon' />
-                    <p className="text-lg px-14 text-gray-900 mt-10">
+                    <p className="text-base lg:text-lg lg:px-14 px-4 text-gray-900 mt-10">
                       Kao jedan od osnivača konferencije CoNStruction smatram da je našem fakultetu uvek dobrodošao jedan ovakav događaj kako bi studenti mogli da steknu i neformalno obrazovanje isto kao i formalno. U tom pogledu, ne sumnjam u ovaj tim talentovane i uspešne omladine.
                     </p>
                     <img width='58' src="https://www.codeference.org/popi.a9d1b3ba.png" className="rounded-full border-2 mt-8" />
@@ -84,7 +84,7 @@ const SaidAboutUs = () => {
                   <img src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64=" className="object-cover w-full h-full" />
                   <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/10 flex flex-col items-center justify-center text-center">
                     <img src={commentImg.src} alt='icon' />
-                    <p className="text-lg px-14 text-gray-900 mt-10">
+                    <p className="text-base lg:text-lg lg:px-14 px-4 text-gray-900 mt-10">
                       Veoma kompetentna i kompletna podrška od planiranja do realizacije. Postupanje sa nama kao i ispunjavanje naših visokih zahteva i očekivanja iznenadilo nas je veoma pozitivno i odražava se u konačnom rezultatu saradnje.
                     </p>
                     <img width='58' src="https://www.codeference.org/kilje03.4b96426d.jpg" className="rounded-full border-2 mt-8" />
@@ -122,7 +122,7 @@ const SaidAboutUs = () => {
                   <img src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64=" className="object-cover w-full h-full" />
                   <div className="absolute w-full h-full bottom-0 bg-gradient-to-r from-cyan-700/40 to-blue-500/10 flex flex-col items-center justify-center text-center">
                     <img src={commentImg.src} alt='icon' />
-                    <p className="text-lg px-14 text-gray-900 mt-10">
+                    <p className="text-base lg:text-lg lg:px-14 px-4 text-gray-900 mt-10">
                       Profesionalni, tačni, originalni, precizni i odgovorni. Imam jako lepu saradnju i iskustvo. Nadam se da će naša saradnja odraziti na kvalitet predavanja i celokupno iskustvo i utisak studenata. Radujem se sledećem susretu.
                     </p>
                     <img width='58' src="https://www.codeference.org/mando01.4457e0d3.jpg" className="rounded-full border-2 mt-8" />

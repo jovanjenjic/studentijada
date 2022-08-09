@@ -49,14 +49,14 @@ const LandingComponent = () => {
       <ApplicationForm showModal={showModal} setShowModal={setShowModal}/>
       <div className="w-full">
           <div className="flex bg-blue-50" style={{backgroundSize: 'cover', backgroundImage: `url(${img.src})`, height: '80vh', clipPath: 'polygon(0 0, 100% 0%, 100% 93%, 0 100%)'}}>
-              <div className="flex items-start text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+              <div className="flex items-start text-center lg:text-left px-6 md:px-12 lg:w-1/2">
                   <div className="flex flex-col justify-evenly h-5/6">
                     <Timer />
-                    <div className="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white bg-opacity-40 p-14">
+                    <div className="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white bg-opacity-40 lg:p-10 px-4 py-6">
                       <div className="flex flex-col items-center">
                         <span className="-rotate-1 rounded-lg bg-yellow-100 py-px px-2 text-sm text-yellow-800">117+ prijavljenih učesnika ove nedelje</span>
-                        <h3 className="mt-2 max-w-2xl text-center text-2xl font-bold leading-tight sm:text-3xl md:text-4xl md:leading-tight">Da li želiš da učestvuješ na konferenciji? Popuni formu i prijavi se</h3>
-                        <button type="button" onClick={() => setShowModal(!showModal)} className="font-bold mt-8 transition duration-500 ease hover:bg-sky-700 inline-block bg-sky-500 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Prijavi se za učešće</button>
+                        <h3 className="mt-2 max-w-2xl text-center font-bold leading-tight text:xl lg:text-2xl xl:text-3xl md:leading-tight">Da li želiš da učestvuješ na konferenciji? Popuni formu i prijavi se</h3>
+                        <button type="button" onClick={() => setShowModal(!showModal)} className="font-bold mt-8 transition duration-500 ease hover:bg-sky-700 inline-block bg-sky-500 lg:text-lg md:text-md text-sm font-medium rounded-full text-white px-8 py-3 cursor-pointer">Prijavi se za učešće</button>
                       </div>
                     </div>
                   </div>
@@ -101,7 +101,7 @@ const LandingComponent = () => {
                   </div>
                 </motion.div>
               </div>
-              <div className="pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
+              <div className="md:pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
                 <motion.div variants={fadeInUp}>
                   <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-inner rounded-lg">
                     <div className="px-4 py-5 flex-auto">

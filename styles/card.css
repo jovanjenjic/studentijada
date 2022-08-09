@@ -1,9 +1,14 @@
 .card {
+  max-width: 420px;
+  width: 100%;
   perspective: 150rem;
   -moz-perspective: 150rem;
   position: relative;
-  height: 36rem; }
+  min-height: 36rem;
+  margin: 0 auto;
+}
   .card__side {
+    max-width: 420px;
     height: 36rem;
     transition: all 0.8s ease;
     position: absolute;
@@ -37,12 +42,6 @@
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     border-top-left-radius: 3px;
     border-top-right-radius: 3px; }
-    /* .card__picture--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
-    .card__picture--2 {
-      background-image: linear-gradient(to right bottom, #55c57a, #27b485), url(../img/nat-6.jpg); }
-    .card__picture--3 {
-      background-image: linear-gradient(to right bottom, #2998ff, #5643fa), url(../img/nat-7.jpg); } */
   .card__heading {
     font-size: 2.8rem;
     font-weight: 300;
@@ -64,7 +63,8 @@
     .card__heading-span--3 {
       background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.85), rgba(86, 67, 250, 0.85)); }
   .card__details {
-    padding: 3rem; }
+    padding: 3rem; 
+  }
     .card__details ul {
       list-style: none;
       width: 80%;
@@ -94,22 +94,28 @@
     font-weight: 100; }
   @media only screen and (max-width: 56.25rem), only screen and (hover: none) {
     .card {
+      border-radius: 10px;
       height: auto;
       border-radius: 3px;
       box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15); }
       .card__side {
-        height: auto;
+        border-radius: 10px;
         position: relative;
         background-color: #fff;
-        box-shadow: none; }
+        box-shadow: none; 
+      }
+        .card__side--front {
+          display: none;
+        }
         .card__side--back {
           transform: rotateY(0);
-          -webkit-clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
-                  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); }
+        }
       .card__details {
-        padding: 1rem 3rem; }
+        padding: 1rem 3rem; 
+      }
       .card:hover .card__side--front {
-        transform: rotateY(0); }
+        transform: rotateY(0); 
+      }
       .card__cta {
         position: relative;
         top: 0;

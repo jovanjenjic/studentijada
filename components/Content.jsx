@@ -14,7 +14,7 @@ const WhatWeDo = () => {
                 <p className="text-light text-gray-200 text-xl">Ovo je ukratko o sadržaju, detaljnije o njemu ćeš saznati na konferenciji da ne kvarimo izenanđenje.</p>
             </header>
             <div className="flex flex-wrap flex-row -mx-4 text-center">
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s">
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s">
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                         <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
@@ -25,7 +25,7 @@ const WhatWeDo = () => {
                         <p className="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
                 </div>
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s">
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                         <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
@@ -36,7 +36,7 @@ const WhatWeDo = () => {
                         <p className="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
                 </div>
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" >
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" >
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                         <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
@@ -47,7 +47,7 @@ const WhatWeDo = () => {
                         <p className="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
                 </div>
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" >
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" >
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                         <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
@@ -58,7 +58,7 @@ const WhatWeDo = () => {
                         <p className="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
                 </div>
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" >
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" >
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                         <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
@@ -69,7 +69,7 @@ const WhatWeDo = () => {
                         <p className="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
                 </div>
-                <div className="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" >
+                <div className="flex-shrink lg:px-4 px-2 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" >
                     <div className="py-8 px-12 mb-12 rounded-lg bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
                     <div className="inline-block text-gray-900 mb-4">
                             <div className="inline-block text-gray-900 mb-4">
