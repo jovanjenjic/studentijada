@@ -1,10 +1,11 @@
-import React from 'react';
-import { useRouter } from 'next/router';
+import React from "react";
+import { useRouter } from "next/router";
+import PropTypes from "prop-types";
 
-import { getCategories, getCategoryPost } from '../../services';
-import { PostCard, Categories, Loader } from '../../components';
+import { getCategories, getCategoryPost } from "../../services";
+import { PostCard, Categories, Loader } from "../../components";
 
-const CategoryPost = ({ posts }) => {
+function CategoryPost({ posts }) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -15,8 +16,8 @@ const CategoryPost = ({ posts }) => {
     <div className="container mx-auto lg:px-10 px-6 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-8 mt-8">
-          {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
+          {posts.map((post) => (
+            <PostCard key={post.createdAt} post={post.node} />
           ))}
         </div>
         <div className="col-span-1 lg:col-span-4">
@@ -27,7 +28,7 @@ const CategoryPost = ({ posts }) => {
       </div>
     </div>
   );
-};
+}
 export default CategoryPost;
 
 // Fetch data at build time
@@ -48,3 +49,7 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+
+CategoryPost.propTypes = {
+  posts: PropTypes.arrayOf.isRequired,
+};

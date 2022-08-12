@@ -1,8 +1,14 @@
+import React, { useState } from "react";
 import Link from "next/link";
-import { useState } from "react";
 
-export default function Header({ categories }) {
+import PropTypes from "prop-types";
+
+function Header({ categories }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const handleOnClick = () => {
+    setIsNavOpen((prev) => !prev);
+  };
 
   return (
     <div className="flex items-center justify-between">
@@ -10,17 +16,27 @@ export default function Header({ categories }) {
         <section className="MOBILE-MENU flex lg:hidden">
           <div
             className="HAMBURGER-ICON space-y-2"
-            onClick={() => setIsNavOpen((prev) => !prev)}
+            onClick={handleOnClick}
+            role="button"
+            onKeyPress={handleOnClick}
+            tabIndex={0}
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-gray-600"></span>
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600" />
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600" />
+            <span className="block h-0.5 w-8 animate-pulse bg-gray-600" />
           </div>
 
-          <div className={isNavOpen ? "showMenuNav opacity-90 bg-sky-50" : "hideMenuNav"}>
+          <div
+            className={
+              isNavOpen ? "showMenuNav opacity-90 bg-sky-50" : "hideMenuNav"
+            }
+          >
             <div
               className="CROSS-ICON absolute top-0 right-0 px-8 py-4"
-              onClick={() => setIsNavOpen(false)}
+              onClick={handleOnClick}
+              role="button"
+              onKeyPress={handleOnClick}
+              tabIndex={0}
             >
               <svg
                 className="h-8 w-8 text-gray-900"
@@ -36,17 +52,38 @@ export default function Header({ categories }) {
               </svg>
             </div>
             <ul className="MENU-LINK-MOBILE-OPEN flex flex-col items-center justify-between min-h-[250px]">
-              <li onClick={() => setIsNavOpen(false)} className="font-bold border-b border-gray-900 my-8 uppercase">
+              <div
+                role="button"
+                onClick={handleOnClick}
+                onKeyPress={handleOnClick}
+                tabIndex={0}
+                className="font-bold border-b border-gray-900 my-8 uppercase"
+              >
                 <Link href="/">Početna stranica</Link>
-              </li>
-              <li onClick={() => setIsNavOpen(false)} className="font-bold border-b border-gray-900 my-8 uppercase">
+              </div>
+              <div
+                role="button"
+                onClick={handleOnClick}
+                onKeyPress={handleOnClick}
+                tabIndex={0}
+                className="font-bold border-b border-gray-900 my-8 uppercase"
+              >
                 <Link href="/post">Vesti</Link>
-              </li>
-                {categories.map((category, index) => (
-                  <li onClick={() => setIsNavOpen(false)} className="font-bold border-b border-gray-900 my-8 uppercase">
-                    <Link key={index} href={`/category/${category.slug}`}>{category.name}</Link>
-                  </li>
-                ))}
+              </div>
+              {categories.map((category) => (
+                <div
+                  role="button"
+                  onKeyPress={handleOnClick}
+                  tabIndex={0}
+                  key={category.slug}
+                  onClick={handleOnClick}
+                  className="font-bold border-b border-gray-900 my-8 uppercase"
+                >
+                  <Link key={category.slug} href={`/category/${category.slug}`}>
+                    {category.name}
+                  </Link>
+                </div>
+              ))}
             </ul>
           </div>
         </section>
@@ -72,3 +109,9 @@ export default function Header({ categories }) {
     </div>
   );
 }
+
+Header.propTypes = {
+  categories: PropTypes.arrayOf.isRequired,
+};
+
+export default Header;

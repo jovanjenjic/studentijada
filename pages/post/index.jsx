@@ -1,15 +1,17 @@
-import { FeaturedPosts } from '../../sections/index';
-import { PostCard, Categories, PostWidget } from '../../components';
-import { getPosts } from '../../services';
+import React from "react";
+import PropTypes from "prop-types";
+import { FeaturedPosts } from "../../sections/index";
+import { PostCard, Categories, PostWidget } from "../../components";
+import { getPosts } from "../../services";
 
-export default function Home({ posts }) {
+function Home({ posts }) {
   return (
     <div className="container mx-auto lg:px-10 px-6 mb-8">
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
-          {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
+          {posts.map((post) => (
+            <PostCard key={post?.createdAt} post={post.node} />
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
@@ -23,6 +25,8 @@ export default function Home({ posts }) {
   );
 }
 
+export default Home;
+
 // Fetch data at build time
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
@@ -30,3 +34,7 @@ export async function getStaticProps() {
     props: { posts },
   };
 }
+
+Home.propTypes = {
+  posts: PropTypes.arrayOf.isRequired,
+};

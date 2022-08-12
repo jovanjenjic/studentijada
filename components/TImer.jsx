@@ -1,14 +1,12 @@
-import React from 'react';
-import { useTimer } from 'react-timer-hook';
-import { motion } from 'framer-motion';
+import React from "react";
+import { useTimer } from "react-timer-hook";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
 
 function MyTimer({ expiryTimestamp }) {
-  const {
-    seconds,
-    minutes,
-    hours,
-    days,
-  } = useTimer({ expiryTimestamp, onExpire: () => console.warn('onExpire called') });
+  const { seconds, minutes, hours, days } = useTimer({
+    expiryTimestamp,
+  });
 
   const dayTime = days < 10 ? `0${days}` : `${days}`;
   const hourTime = hours < 10 ? `0${hours}` : `${hours}`;
@@ -18,7 +16,11 @@ function MyTimer({ expiryTimestamp }) {
   return (
     <div className="container max-w-3xl mx-auto">
       <div className="flex flex-wrap flex-row items-center justify-evenly">
-        <motion.div initial={{ y: 160, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.5 }}>
+        <motion.div
+          initial={{ y: 160, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+        >
           <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
               className="bg-white font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-3 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
@@ -29,7 +31,11 @@ function MyTimer({ expiryTimestamp }) {
             <span className="title">Dana</span>
           </div>
         </motion.div>
-        <motion.div initial={{ y: 120, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.4 }}>
+        <motion.div
+          initial={{ y: 120, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.4 }}
+        >
           <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
               className="bg-white  font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-3 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
@@ -40,7 +46,11 @@ function MyTimer({ expiryTimestamp }) {
             <span className="title">Sati</span>
           </div>
         </motion.div>
-        <motion.div initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
+        <motion.div
+          initial={{ y: 80, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3 }}
+        >
           <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
               className="bg-white  font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-3 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
@@ -51,7 +61,11 @@ function MyTimer({ expiryTimestamp }) {
             <span className="title">Minuta</span>
           </div>
         </motion.div>
-        <motion.div initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2 }}>
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
           <div className="flex items-center flex-col flex-nowrap transform transition duration-300 ease-in-out hover:-translate-y-2">
             <span
               className="bg-white font-semibold time-elem relative w-16 h-16 2xl:w-32 lg:w-30 md:w-24 sm:w-20 2xl:h-32 lg:h-30 md:h-24 sm:h-20 shadow-xl flex items-center justify-center mb-2 xl:mb-3 rounded-lg 2xl:text-6xl xl:text:5xl lg:text-4xl md:text-3xl text-3xl"
@@ -67,10 +81,14 @@ function MyTimer({ expiryTimestamp }) {
   );
 }
 
-export default function Timer() {
+MyTimer.propTypes = {
+  expiryTimestamp: PropTypes.string.isRequired,
+};
+
+function Timer() {
   const time = new Date();
   time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
-  return (
-    <MyTimer expiryTimestamp={time} />
-  );
+  return <MyTimer expiryTimestamp={time} />;
 }
+
+export default Timer;

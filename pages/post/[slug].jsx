@@ -1,12 +1,20 @@
-import React from 'react';
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
+import React from "react";
+import { useRouter } from "next/router";
+import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import {
+  PostDetail,
+  Categories,
+  PostWidget,
+  Author,
+  Comments,
+  CommentsForm,
+  Loader,
+} from "../../components";
+import { getPosts, getPostDetails } from "../../services";
+import { AdjacentPosts } from "../../sections";
 
-import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components';
-import { getPosts, getPostDetails } from '../../services';
-import { AdjacentPosts } from '../../sections';
-
-const PostDetails = ({ post }) => {
+function PostDetails({ post }) {
   const router = useRouter();
 
   if (router.isFallback) {
@@ -14,19 +22,25 @@ const PostDetails = ({ post }) => {
   }
 
   return (
-    <motion.div exit={{ opacitiy: 0}}>
+    <motion.div exit={{ opacitiy: 0 }}>
       <div className="container mx-auto lg:px-10 px-6 my-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-8">
             <PostDetail post={post} />
             <Author author={post.author} />
-            <AdjacentPosts slug={post.slug} createdAt={post.date || post.createdAt} />
+            <AdjacentPosts
+              slug={post.slug}
+              createdAt={post.date || post.createdAt}
+            />
             <CommentsForm slug={post.slug} />
             <Comments slug={post.slug} />
           </div>
           <div className="col-span-1 lg:col-span-4">
             <div className="relative lg:sticky top-8">
-              <PostWidget slug={post.slug} categories={post.categories.map((category) => category.slug)} />
+              <PostWidget
+                slug={post.slug}
+                categories={post.categories.map((category) => category.slug)}
+              />
               <Categories />
             </div>
           </div>
@@ -34,7 +48,7 @@ const PostDetails = ({ post }) => {
       </div>
     </motion.div>
   );
-};
+}
 export default PostDetails;
 
 // Fetch data at build time
@@ -56,3 +70,7 @@ export async function getStaticPaths() {
     fallback: true,
   };
 }
+
+PostDetails.propTypes = {
+  post: PropTypes.arrayOf.isRequired,
+};

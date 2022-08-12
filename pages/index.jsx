@@ -1,5 +1,11 @@
-import { AskForm, SaidAboutUs, Content, LandingComponent, Description } from '../components';
-import { getPosts } from '../services';
+import React from "react";
+import {
+  AskForm,
+  SaidAboutUs,
+  Content,
+  LandingComponent,
+  Description,
+} from "../components";
 
 export default function Home() {
   return (
