@@ -10,14 +10,14 @@ function SaidAboutUs() {
           <div id="title" className="text-center my-10">
             <h1 className="font-bold text-4xl text-white">Rekli su o nama</h1>
           </div>
-          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-evenly gap-10 pt-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 justify-evenly gap-10 pt-10">
             <div className="card">
               <div className="card__side card__side--front">
                 <div className="relative flex flex-col justify-around col-span-6 border border-gray-100 rounded shadow-lg cursor-pointer bg-blue-50 md:col-span-3 lg:col-span-2 h-full">
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="First"
-                      className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                      className="rounded-full shadow-2xl object-cover max-w-6"
                       src="https://www.codeference.org/popi.a9d1b3ba.png"
                     />
                   </div>
@@ -34,7 +34,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card className="relative h-[30rem] sm:h-96 w-[35rem] w-full h-full">
+                <card className="relative w-full h-full">
                   <img
                     alt="Second"
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
@@ -71,7 +71,7 @@ function SaidAboutUs() {
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="A. Okiljevic"
-                      className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                      className="rounded-full shadow-2xl object-cover max-w-6"
                       src="https://www.codeference.org/kilje03.4b96426d.jpg"
                     />
                   </div>
@@ -88,7 +88,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card className="relative h-[30rem] sm:h-96 w-[35rem]">
+                <card >
                   <img
                     alt="Aleksandr O."
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
@@ -124,7 +124,7 @@ function SaidAboutUs() {
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="Mandic N."
-                      className="w-[300px] h-[300px] rounded-full shadow-2xl object-cover"
+                      className="rounded-full shadow-2xl object-cover max-w-6"
                       src="https://www.codeference.org/mando01.4457e0d3.jpg"
                     />
                   </div>
@@ -141,7 +141,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card className="relative h-[30rem] sm:h-96 w-[35rem]">
+                <card >
                   <img
                     alt="Nikola M."
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
