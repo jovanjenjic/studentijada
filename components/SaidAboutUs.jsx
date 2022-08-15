@@ -17,7 +17,7 @@ function SaidAboutUs() {
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="First"
-                      className="rounded-full shadow-2xl object-cover max-w-6"
+                      className="rounded-full shadow-2xl object-cover"
                       src="https://www.codeference.org/popi.a9d1b3ba.png"
                     />
                   </div>
@@ -34,7 +34,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card className="relative w-full h-full">
+                <card>
                   <img
                     alt="Second"
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
@@ -71,7 +71,7 @@ function SaidAboutUs() {
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="A. Okiljevic"
-                      className="rounded-full shadow-2xl object-cover max-w-6"
+                      className="rounded-full shadow-2xl object-cover"
                       src="https://www.codeference.org/kilje03.4b96426d.jpg"
                     />
                   </div>
@@ -124,7 +124,7 @@ function SaidAboutUs() {
                   <div className="flex justify-center px-2 mx-3 text-sm font-medium text-gray-400">
                     <img
                       alt="Mandic N."
-                      className="rounded-full shadow-2xl object-cover max-w-6"
+                      className="rounded-full shadow-2xl object-cover"
                       src="https://www.codeference.org/mando01.4457e0d3.jpg"
                     />
                   </div>
