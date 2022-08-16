@@ -3,7 +3,13 @@ import { useRouter } from "next/router";
 import PropTypes from "prop-types";
 
 import { getCategories, getCategoryPost } from "../../services";
-import { PostCard, Categories, Loader } from "../../components";
+import {
+  PostCard,
+  Categories,
+  Loader,
+  AfterMovie,
+  Support21,
+} from "../../components";
 
 function CategoryPost({ posts }) {
   const router = useRouter();
@@ -13,20 +19,24 @@ function CategoryPost({ posts }) {
   }
 
   return (
-    <div className="container mx-auto lg:px-10 px-6 mb-8">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="col-span-1 lg:col-span-8 mt-8">
-          {posts.map((post) => (
-            <PostCard key={post.createdAt} post={post.node} />
-          ))}
-        </div>
-        <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8 mt-9">
-            <Categories />
+    <>
+      <AfterMovie />
+      <Support21 />
+      <div className="container mx-auto lg:px-10 px-6 mb-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="col-span-1 lg:col-span-8 mt-8">
+            {posts.map((post) => (
+              <PostCard key={post.createdAt} post={post.node} />
+            ))}
+          </div>
+          <div className="col-span-1 lg:col-span-4">
+            <div className="relative lg:sticky top-8 mt-9">
+              <Categories />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 export default CategoryPost;

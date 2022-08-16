@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { Layout } from "../components";
 import "../styles/globals.scss";
 import "../styles/card.css";
+import "../styles/iframe.css";
 
 function MyApp({ Component, pageProps }) {
   return (

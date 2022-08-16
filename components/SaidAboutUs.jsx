@@ -88,7 +88,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card >
+                <card>
                   <img
                     alt="Aleksandr O."
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
@@ -141,7 +141,7 @@ function SaidAboutUs() {
                 </div>
               </div>
               <div className="card__side card__side--back">
-                <card >
+                <card>
                   <img
                     alt="Nikola M."
                     src="https://media.istockphoto.com/vectors/abstract-white-background-vector-id1142563796?k=20&m=1142563796&s=612x612&w=0&h=kZABOtzW6eQOMZvDuLHiNsh-mM_2o9slZKq6-GN6W64="
