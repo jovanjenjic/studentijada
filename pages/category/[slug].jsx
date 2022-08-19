@@ -23,7 +23,7 @@ function CategoryPost({ posts }) {
       )}
       <div className="container mx-auto lg:px-10 px-6 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          <div className="relative -top-80 col-span-1 lg:col-span-8 lg:col-start-3 mt-8">
+          <div className="relative col-span-1 lg:col-span-8 lg:col-start-3 mt-8">
             {posts.map((post) => (
               <PostCard key={post.createdAt} post={post.node} />
             ))}
