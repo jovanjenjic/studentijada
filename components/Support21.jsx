@@ -7,7 +7,7 @@ function Description() {
       style={{ clipPath: "polygon(0% 7%, 100% 0%, 100% 93%, 0 100%)" }}
       className="w-full pt-80 pb-10 lg:pb-32 relative -top-80 flex justify-center lg:bg-black lg:bg-opacity-20 rounded-lg"
     >
-      <section className="pb-8 lg:pb-20 bg-blueGray-100">
+      <section className="pb-10 lg:pb-20 bg-blueGray-100">
         <div className="container mx-auto px-4">
           <div className="pt-6">
             <div className="mb-12 flex flex-wrap -mx-4 justify-center">
