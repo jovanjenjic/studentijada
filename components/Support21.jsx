@@ -35,13 +35,13 @@ function Description() {
                 Working with us is a pleasure
               </h3>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
-                Don't let your users guess by attaching tooltips and popoves to
+                Do not let your users guess by attaching tooltips and popoves to
                 any element. Just make sure you enable them first via
                 JavaScript.
               </p>
               <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-white">
                 The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you're good to
+                faster. You can change the text and images and you are good to
                 go. Just make sure you enable them first via JavaScript.
               </p>
               <a className="font-bold text-white mt-8" href="#/">
