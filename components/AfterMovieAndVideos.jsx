@@ -1,42 +1,65 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import Carousel from "./Carousel";
 
-function AfterMovie() {
+function AfterMovieAndVideos({ videoUrl, videoBgUrl, subcategories, images }) {
+  const [showVideo, setShowVideo] = React.useState(true);
+
+  React.useEffect(() => {
+    if (subcategories?.videoBgUrl) setShowVideo(true);
+    else setShowVideo(false);
+  }, []);
+
+  const showVideoOrImage =
+    subcategories?.videoBgUrl && subcategories?.images.length;
+
   return (
-    <div className="relative z-10">
+    <div className="relative z-10 bg-black bg-opacity-20">
       <div
         style={{ clipPath: "polygon(0 0, 100% 0%, 100% 93%, 0 100%)" }}
         className="z-1 relative h-[calc(90vh-65px)] "
       >
+        {!showVideo && <Carousel images={images} />}
         <div className="vimeo-wrapper">
-          <iframe
-            title="Video sa konferencije 2021."
-            className="w-full"
-            src="https://player.vimeo.com/video/739682201?h=142fdace2d&amp;player_id=0&amp;playsinline=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0&amp;background=1&amp;title=0"
-            frameBorder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowFullScreen
-          />
-          <div className="absolute flex justify-center items-center w-full h-full rounded-md bg-black bg-opacity-40 lg:p-10 px-4 py-6">
-            <div className="flex flex-col items-center">
+          {showVideo && (
+            <iframe
+              title="Video sa konferencije 2021."
+              className="w-full"
+              src={videoBgUrl}
+              frameBorder="0"
+              webkitallowfullscreen
+              mozallowfullscreen
+              allowFullScreen
+            />
+          )}
+
+          <div className="z-10 absolute flex justify-center items-center w-full h-full rounded-md bg-black bg-opacity-40 lg:p-10 px-4 py-6">
+            <div className=" flex flex-col items-center ">
               <span className="-rotate-1 rounded-lg bg-sky-100 py-px px-2 text-sm text-sky-800">
                 270 studenata je učestvovalo na konferenciji 2021. godine
               </span>
               <h3 className="mt-2 max-w-2xl text-white text-center font-bold leading-tight text:xl lg:text-2xl xl:text-3xl md:leading-tight">
                 Ukoliko želis da pogledaš ceo video sa konferencije, klikni na
-                dugme ispod
-              </h3>
-              <Link href="https://player.vimeo.com/video/739682201">
-                <a
-                  href="https://player.vimeo.com/video/739682201"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                dugme ispod.
+                {showVideoOrImage ? (
                   <button
                     type="button"
-                    className="font-bold mt-8 transition duration-500 ease hover:bg-sky-700 inline-block bg-sky-500 lg:text-lg md:text-md text-sm font-medium rounded-full text-white px-8 py-3 cursor-pointer"
+                    onClick={() => setShowVideo((prevState) => !prevState)}
+                    className="cursor-pointer text-sky-500 hover:text-sky-700 duration-300"
+                  >
+                    Pogledaj slike
+                  </button>
+                ) : (
+                  <p />
+                )}
+              </h3>
+              <Link href={videoUrl}>
+                <a href={videoUrl} target="_blank" rel="noreferrer">
+                  <button
+                    type="button"
+                    className="font-bold mt-8 transition  ease hover:bg-sky-700 inline-block bg-sky-500 lg:text-lg md:text-md text-sm font-medium rounded-full text-white px-8 py-3 cursor-pointer"
                   >
                     Link do videa
                   </button>
@@ -46,7 +69,7 @@ function AfterMovie() {
           </div>
         </div>
       </div>
-      <section className="pb-10 bg-blueGray-200 -mt-24">
+      <section className="pb-10 -mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
@@ -116,4 +139,11 @@ function AfterMovie() {
   );
 }
 
-export default AfterMovie;
+AfterMovieAndVideos.propTypes = {
+  videoUrl: PropTypes.string.isRequired,
+  videoBgUrl: PropTypes.string.isRequired,
+  subcategories: PropTypes.arrayOf.isRequired,
+  images: PropTypes.arrayOf.isRequired,
+};
+
+export default AfterMovieAndVideos;

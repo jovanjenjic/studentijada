@@ -1,11 +1,11 @@
 import React from "react";
 import imgPeople from "../public/group.png";
 
-function Description() {
+function Support() {
   return (
     <div
-      style={{ clipPath: "polygon(0% 7%, 100% 0%, 100% 93%, 0 100%)" }}
-      className="w-full pt-80 pb-10 lg:pb-32 relative -top-80 flex justify-center lg:bg-black lg:bg-opacity-20 rounded-lg"
+      style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 93%, 0 100%)" }}
+      className="w-full pt-8 pb-10 lg:pb-32 relative flex justify-center bg-black bg-opacity-20 rounded-lg"
     >
       <section className="pb-10 lg:pb-20 bg-blueGray-100">
         <div className="container mx-auto px-4">
@@ -61,4 +61,4 @@ function Description() {
   );
 }
 
-export default Description;
+export default Support;

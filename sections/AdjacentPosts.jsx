@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import { AdjacentPostCard } from "../components";
 import { getAdjacentPosts } from "../services";
 
-function AdjacentPosts({ createdAt, slug }) {
+function AdjacentPosts({ createdAt, slug, subcategoryName }) {
   const [adjacentPost, setAdjacentPost] = useState(null);
   const [dataLoaded, setDataLoaded] = useState(false);
 
   useEffect(() => {
-    getAdjacentPosts(createdAt, slug).then((result) => {
+    getAdjacentPosts(createdAt, slug, subcategoryName).then((result) => {
       setAdjacentPost(result);
       setDataLoaded(true);
     });
@@ -18,7 +18,7 @@ function AdjacentPosts({ createdAt, slug }) {
     <div className="grid grid-cols-1 lg:grid-cols-8 gap-12 mb-8">
       {dataLoaded && (
         <>
-          {adjacentPost.previous && (
+          {adjacentPost.next && (
             <div
               className={`${
                 adjacentPost.next
@@ -26,10 +26,10 @@ function AdjacentPosts({ createdAt, slug }) {
                   : "col-span-1 lg:col-span-8"
               } adjacent-post rounded-lg relative h-72`}
             >
-              <AdjacentPostCard post={adjacentPost.previous} position="LEFT" />
+              <AdjacentPostCard post={adjacentPost.next} position="LEFT" />
             </div>
           )}
-          {adjacentPost.next && (
+          {adjacentPost.previous && (
             <div
               className={`${
                 adjacentPost.previous
@@ -37,7 +37,7 @@ function AdjacentPosts({ createdAt, slug }) {
                   : "col-span-1 lg:col-span-8"
               } adjacent-post rounded-lg relative h-72`}
             >
-              <AdjacentPostCard post={adjacentPost.next} position="RIGHT" />
+              <AdjacentPostCard post={adjacentPost.previous} position="RIGHT" />
             </div>
           )}
         </>
@@ -49,6 +49,7 @@ function AdjacentPosts({ createdAt, slug }) {
 AdjacentPosts.propTypes = {
   createdAt: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  subcategoryName: PropTypes.string.isRequired,
 };
 
 export default AdjacentPosts;

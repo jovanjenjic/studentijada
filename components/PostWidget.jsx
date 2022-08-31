@@ -7,17 +7,17 @@ import PropTypes from "prop-types";
 import { grpahCMSImageLoader } from "../util";
 import { getSimilarPosts, getRecentPosts } from "../services";
 
-function PostWidget({ categories, slug }) {
+function PostWidget({ subcategoryName, slug }) {
   const [relatedPosts, setRelatedPosts] = useState([]);
 
   useEffect(() => {
     if (slug) {
-      getSimilarPosts(categories, slug).then((result) => {
-        setRelatedPosts(result);
+      getSimilarPosts(subcategoryName, slug).then((result) => {
+        setRelatedPosts(result.reverse());
       });
     } else {
       getRecentPosts().then((result) => {
-        setRelatedPosts(result);
+        setRelatedPosts(result.reverse());
       });
     }
   }, [slug]);
@@ -59,7 +59,7 @@ function PostWidget({ categories, slug }) {
 }
 
 PostWidget.propTypes = {
-  categories: PropTypes.arrayOf.isRequired,
+  subcategoryName: PropTypes.arrayOf.isRequired,
   slug: PropTypes.string.isRequired,
 };
 

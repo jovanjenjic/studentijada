@@ -7,6 +7,13 @@ import "../styles/card.css";
 import "../styles/afterMovie.css";
 
 function MyApp({ Component, pageProps }) {
+  React.useEffect(() => {
+    const use = async () => {
+      // eslint-disable-next-line
+      (await import("tw-elements")).default;
+    };
+    use();
+  }, []);
   return (
     <AnimatePresence exitBeforeEnter>
       <Layout>

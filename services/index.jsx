@@ -25,10 +25,6 @@ export const getPosts = async (hide = false) => {
             featuredImage {
               url
             }
-            categories {
-              name
-              slug
-            }
           }
         }
       }
@@ -46,6 +42,10 @@ export const getCategories = async () => {
       categories {
         name
         slug
+        subcategories {
+          name
+          slug
+        }
       }
     }
   `;
@@ -53,6 +53,44 @@ export const getCategories = async () => {
   const result = await request(graphqlAPI, query);
 
   return result.categories;
+};
+
+export const getSubCategories = async () => {
+  const query = gql`
+    query GetSubGategories {
+      subcategories {
+        name
+        slug
+        category {
+          name
+          slug
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result;
+};
+
+export const getSubcategoryDetails = async (slug) => {
+  const query = gql`
+    query GetSubcategoryDetails($slug: String!) {
+      subcategory(where: { slug: $slug }) {
+        name
+        videoUrl
+        videoBgUrl
+        images {
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result;
 };
 
 export const getPostDetails = async (slug) => {
@@ -72,13 +110,13 @@ export const getPostDetails = async (slug) => {
           }
         }
         createdAt
+        date
         slug
         content {
           raw
         }
-        categories {
+        subcategory {
           name
-          slug
         }
       }
     }
@@ -89,20 +127,17 @@ export const getPostDetails = async (slug) => {
   return result.post;
 };
 
-export const getSimilarPosts = async (categories, slug, hide = false) => {
+export const getSimilarPosts = async (subcategoryName, slug, hide = false) => {
   const query = gql`
     query GetPostDetails(
       $slug: String!
-      $categories: [String!]
+      $subcategoryName: String!
       $hide: Boolean!
     ) {
       posts(
         where: {
           slug_not: $slug
-          AND: {
-            categories_some: { slug_in: $categories }
-            AND: { hide: $hide }
-          }
+          AND: { subcategory: { name: $subcategoryName }, AND: { hide: $hide } }
         }
         last: 3
       ) {
@@ -116,24 +151,40 @@ export const getSimilarPosts = async (categories, slug, hide = false) => {
       }
     }
   `;
-  const result = await request(graphqlAPI, query, { slug, categories, hide });
+  const result = await request(graphqlAPI, query, {
+    slug,
+    subcategoryName,
+    hide,
+  });
 
   return result.posts;
 };
 
-export const getAdjacentPosts = async (createdAt, slug, hide = false) => {
+export const getAdjacentPosts = async (
+  createdAt,
+  slug,
+  subcategoryName,
+  hide = false
+) => {
   const query = gql`
     query GetAdjacentPosts(
-      $createdAt: DateTime!
+      $createdAt: Date!
       $slug: String!
       $hide: Boolean!
+      $subcategoryName: String!
     ) {
       next: posts(
         first: 1
-        orderBy: createdAt_ASC
+        orderBy: date_ASC
         where: {
           slug_not: $slug
-          AND: { createdAt_gte: $createdAt, AND: { hide: $hide } }
+          AND: {
+            date_gte: $createdAt
+            AND: {
+              hide: $hide
+              AND: { subcategory: { name: $subcategoryName } }
+            }
+          }
         }
       ) {
         title
@@ -146,10 +197,16 @@ export const getAdjacentPosts = async (createdAt, slug, hide = false) => {
       }
       previous: posts(
         first: 1
-        orderBy: createdAt_DESC
+        orderBy: date_DESC
         where: {
           slug_not: $slug
-          AND: { createdAt_lte: $createdAt, AND: { hide: $hide } }
+          AND: {
+            date_lte: $createdAt
+            AND: {
+              hide: $hide
+              AND: { subcategory: { name: $subcategoryName } }
+            }
+          }
         }
       ) {
         title
@@ -163,16 +220,22 @@ export const getAdjacentPosts = async (createdAt, slug, hide = false) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query, { slug, createdAt, hide });
+  const result = await request(graphqlAPI, query, {
+    slug,
+    createdAt,
+    subcategoryName,
+    hide,
+  });
 
   return { next: result.next[0], previous: result.previous[0] };
 };
 
-export const getCategoryPost = async (slug, hide = false) => {
+export const getSubcategoryPost = async (subSlug, hide = false) => {
   const query = gql`
-    query GetCategoryPost($slug: String!, $hide: Boolean!) {
+    query GetSubcategoryPosts($subSlug: String!, $hide: Boolean!) {
       postsConnection(
-        where: { categories_some: { slug: $slug }, hide: $hide }
+        where: { subcategory: { slug: $subSlug }, hide: $hide }
+        orderBy: date_DESC
       ) {
         edges {
           cursor
@@ -193,17 +256,13 @@ export const getCategoryPost = async (slug, hide = false) => {
             featuredImage {
               url
             }
-            categories {
-              name
-              slug
-            }
           }
         }
       }
     }
   `;
 
-  const result = await request(graphqlAPI, query, { slug, hide });
+  const result = await request(graphqlAPI, query, { subSlug, hide });
 
   return result.postsConnection.edges;
 };

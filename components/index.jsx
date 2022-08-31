@@ -1,7 +1,6 @@
 export { default as PostCard } from "./PostCard";
 export { default as PostDetail } from "./PostDetail";
 export { default as Layout } from "./Layout";
-export { default as Categories } from "./Categories";
 export { default as Author } from "./Author";
 export { default as PostWidget } from "./PostWidget";
 export { default as AdjacentPostCard } from "./AdjacentPostCard";
@@ -18,5 +17,5 @@ export { default as Description } from "./Description";
 export { default as Timer } from "./TImer";
 export { default as ApplicationForm } from "./ApplicationForm";
 export { default as HamburgerMenu } from "./HamburgerMenu";
-export { default as AfterMovie } from "./AfterMovie";
-export { default as Support21 } from "./Support21";
+export { default as AfterMovie } from "./AfterMovieAndVideos";
+export { default as Support } from "./Support";
