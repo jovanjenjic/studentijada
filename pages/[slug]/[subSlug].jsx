@@ -101,5 +101,5 @@ export async function getStaticPaths() {
 
 CategoryPost.propTypes = {
   posts: PropTypes.arrayOf.isRequired,
-  subcategories: PropTypes.arrayOf.isRequired,
+  subDetails: PropTypes.arrayOf.isRequired,
 };
