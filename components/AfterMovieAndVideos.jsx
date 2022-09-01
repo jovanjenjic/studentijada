@@ -4,16 +4,15 @@ import { motion } from "framer-motion";
 import PropTypes from "prop-types";
 import Carousel from "./Carousel";
 
-function AfterMovieAndVideos({ videoUrl, videoBgUrl, subcategories, images }) {
+function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
   const [showVideo, setShowVideo] = React.useState(true);
 
   React.useEffect(() => {
-    if (subcategories?.videoBgUrl) setShowVideo(true);
+    if (subDetails?.videoBgUrl) setShowVideo(true);
     else setShowVideo(false);
   }, []);
 
-  const showVideoOrImage =
-    subcategories?.videoBgUrl && subcategories?.images.length;
+  const showVideoOrImage = subDetails?.videoBgUrl && subDetails?.images.length;
 
   return (
     <div className="relative z-10 bg-black bg-opacity-20">
@@ -142,7 +141,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subcategories, images }) {
 AfterMovieAndVideos.propTypes = {
   videoUrl: PropTypes.string.isRequired,
   videoBgUrl: PropTypes.string.isRequired,
-  subcategories: PropTypes.arrayOf.isRequired,
+  subDetails: PropTypes.arrayOf.isRequired,
   images: PropTypes.arrayOf.isRequired,
 };
 
