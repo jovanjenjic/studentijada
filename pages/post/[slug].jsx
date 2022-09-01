@@ -36,7 +36,7 @@ function PostDetails({ post }) {
             <Comments slug={post.slug} />
           </div>
           <div className="col-span-1 lg:col-span-4">
-            <div className="relative lg:sticky lg:top-20 -top-14">
+            <div className="relative lg:sticky lg:top-20 -top-12">
               <PostWidget
                 slug={post.slug}
                 subcategoryName={post?.subcategory?.name}
