@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useTimer } from "react-timer-hook";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
-function MyTimer({ expiryTimestamp }) {
-  const { seconds, minutes, hours, days } = useTimer({
-    expiryTimestamp,
+function MyTimer() {
+  const [time, setTime] = useState();
+
+  const { seconds, minutes, hours, days, restart } = useTimer({
+    expiryTimestamp: time,
   });
+
+  useEffect(() => {
+    setTime(new Date(new Date("10 24 2022").getTime()));
+  }, []);
+
+  useEffect(() => {
+    restart(time);
+  }, [time]);
 
   const dayTime = days < 10 ? `0${days}` : `${days}`;
   const hourTime = hours < 10 ? `0${hours}` : `${hours}`;
@@ -81,14 +90,4 @@ function MyTimer({ expiryTimestamp }) {
   );
 }
 
-MyTimer.propTypes = {
-  expiryTimestamp: PropTypes.string.isRequired,
-};
-
-function Timer() {
-  const time = new Date();
-  time.setSeconds(time.getSeconds() + 600); // 10 minutes timer
-  return <MyTimer expiryTimestamp={time} />;
-}
-
-export default Timer;
+export default MyTimer;

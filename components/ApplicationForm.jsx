@@ -1,25 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 function ApplicationForm({ showModal, setShowModal }) {
-  const [formData, setFormData] = useState({
-    name: null,
-    email: null,
-    question: null,
-    storeData: false,
-  });
+  // const [formData, setFormData] = useState({
+  //   name: null,
+  //   email: null,
+  //   question: null,
+  //   storeData: false,
+  // });
 
   const onInputChange = (e) => {
-    const { target } = e;
-    setFormData((prevState) => ({
-      ...prevState,
-      [target.name]: target.value,
-    }));
-  };
-
-  const handlePostSubmission = () => {
-    setShowModal((prevState) => !prevState);
-    console.log(formData); // eslint-disable-line
+    // const { target } = e;
+    // setFormData((prevState) => ({
+    //   ...prevState,
+    //   [target.name]: target.value,
+    // }));
   };
 
   return showModal ? (
@@ -148,13 +143,20 @@ function ApplicationForm({ showModal, setShowModal }) {
               >
                 Odustani
               </button>
-              <button
-                className="transition duration-500 ease hover:bg-sky-700 bg-sky-500 text-white font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                type="button"
-                onClick={handlePostSubmission}
-              >
-                Prijavi se
-              </button>
+              <div className="group flex relative">
+                <span className="bg-sky-400 rounded-3xl text-white px-6 py-2 opacity-50 cursor-not-allowed	text-lg">
+                  Prijavi se
+                </span>
+                <span
+                  className="absolute -top-44 group-hover:opacity-100 transition-opacity bg-gray-800 px-1 text-sm text-gray-100 rounded-md absolute left-1/2 
+    -translate-x-1/2 translate-y-full opacity-0 m-4 mx-auto"
+                >
+                  Prijave su za sada predvidjene u kancelariji Studentsku unije
+                  Fakulteta tahničkih nauka. Za više informacije kontaktirajte
+                  nas na email: codeference@gmail.com ili putem forme na dnu
+                  stranice.
+                </span>
+              </div>
             </div>
           </div>
         </div>
