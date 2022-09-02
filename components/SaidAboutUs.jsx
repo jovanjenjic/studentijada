@@ -1,5 +1,7 @@
 import React from "react";
-
+import kiljaImg from '../public/kilje.jpg';
+import mandaImg from '../public/manda.jpg';
+import poparaImg from '../public/popara.png';
 import commentImg from "../public/comments.png";
 
 function SaidAboutUs() {
@@ -18,7 +20,7 @@ function SaidAboutUs() {
                     <img
                       alt="First"
                       className="rounded-full shadow-2xl object-cover"
-                      src="https://www.codeference.org/popi.a9d1b3ba.png"
+                      src={poparaImg?.src}
                     />
                   </div>
                   <div className="mb-5 border-t border-gray-50">
@@ -52,7 +54,7 @@ function SaidAboutUs() {
                     <img
                       alt="Detail"
                       width="58"
-                      src="https://www.codeference.org/popi.a9d1b3ba.png"
+                      src={poparaImg?.src}
                       className="rounded-full border-2 mt-8"
                     />
                     <p className="text-base font-bold px-14 text-gray-900 mt-3">
@@ -72,7 +74,7 @@ function SaidAboutUs() {
                     <img
                       alt="A. Okiljevic"
                       className="rounded-full shadow-2xl object-cover"
-                      src="https://www.codeference.org/kilje03.4b96426d.jpg"
+                      src={kiljaImg?.src}
                     />
                   </div>
                   <div className="mb-5 border-t border-gray-50">
@@ -105,7 +107,7 @@ function SaidAboutUs() {
                     <img
                       alt="Small"
                       width="58"
-                      src="https://www.codeference.org/kilje03.4b96426d.jpg"
+                      src={kiljaImg?.src}
                       className="rounded-full border-2 mt-8"
                     />
                     <p className="text-base font-bold px-14 text-gray-900 mt-3">
@@ -125,7 +127,7 @@ function SaidAboutUs() {
                     <img
                       alt="Mandic N."
                       className="rounded-full shadow-2xl object-cover"
-                      src="https://www.codeference.org/mando01.4457e0d3.jpg"
+                      src={mandaImg?.src}
                     />
                   </div>
                   <div className="mb-5 border-t border-gray-50">
@@ -158,7 +160,7 @@ function SaidAboutUs() {
                     <img
                       alt="Small"
                       width="58"
-                      src="https://www.codeference.org/mando01.4457e0d3.jpg"
+                      src={mandaImg?.src}
                       className="rounded-full border-2 mt-8"
                     />
                     <p className="text-base font-bold px-14 text-gray-900 mt-3">
