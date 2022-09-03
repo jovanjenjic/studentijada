@@ -7,7 +7,12 @@ import {
   getSubcategoryDetails,
   getSubcategoryPost,
 } from "../../services";
-import { PostCard, Loader, AfterMovieAndVideos, Support } from "../../components";
+import {
+  PostCard,
+  Loader,
+  AfterMovieAndVideos,
+  Support,
+} from "../../components";
 
 function CategoryPost({ posts, subDetails }) {
   const [sizeAndPages, setSizeAndPages] = useState({ size: 3, page: 1 });

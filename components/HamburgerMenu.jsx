@@ -70,28 +70,19 @@ function Header({ categories }) {
               >
                 <Link href="/post">Vesti</Link>
               </div>
-              {categories.map((cat) => (
-                <div
-                  role="button"
-                  onKeyPress={handleOnClick}
-                  tabIndex={0}
-                  key={cat.slug}
-                  onClick={handleOnClick}
-                >
-                  <div className="font-bold border-b border-gray-900 my-8 uppercase min-w-max">
-                    {cat.name}
+              {categories.map((cat) =>
+                cat.subcategories.map((sub) => (
+                  <div
+                    role="button"
+                    onClick={handleOnClick}
+                    onKeyPress={handleOnClick}
+                    tabIndex={0}
+                    className="font-bold border-b border-gray-900 my-8 uppercase"
+                  >
+                    <Link href={`/${cat?.slug}/${sub?.slug}`}>{sub?.name}</Link>
                   </div>
-                  <div>
-                    {cat?.subcategories.map((sub) => (
-                      <li className="py-2 px-4 block whitespace-no-wrap font-bold my-8 uppercase">
-                        <Link href={`/${cat?.slug}/${sub?.slug}`}>
-                          {sub?.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </div>
-                </div>
-              ))}
+                ))
+              )}
             </ul>
           </div>
         </section>

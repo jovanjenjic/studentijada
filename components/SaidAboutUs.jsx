@@ -1,7 +1,7 @@
 import React from "react";
-import kiljaImg from '../public/kilje.jpg';
-import mandaImg from '../public/manda.jpg';
-import poparaImg from '../public/popara.png';
+import kiljaImg from "../public/kilje.jpg";
+import mandaImg from "../public/manda.jpg";
+import poparaImg from "../public/popara.png";
 import commentImg from "../public/comments.png";
 
 function SaidAboutUs() {
