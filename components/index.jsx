@@ -17,5 +17,5 @@ export { default as Description } from "./Description";
 export { default as Timer } from "./TImer";
 export { default as ApplicationForm } from "./ApplicationForm";
 export { default as HamburgerMenu } from "./HamburgerMenu";
-export { default as AfterMovie } from "./AfterMovieAndVideos";
+export { default as AfterMovieAndVideos } from "./AfterMovieAndVideos";
 export { default as Support } from "./Support";

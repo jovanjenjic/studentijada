@@ -84,6 +84,10 @@ export const getSubcategoryDetails = async (slug) => {
         images {
           url
         }
+        startDate
+        endDate
+        location
+        participantsNumber
       }
     }
   `;

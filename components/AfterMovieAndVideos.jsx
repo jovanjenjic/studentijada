@@ -1,8 +1,12 @@
-import Link from "next/link";
-import React from "react";
+
+import React from "react";import Link from "next/link";
 import { motion } from "framer-motion";
 import PropTypes from "prop-types";
+import dayjs from "dayjs";
 import Carousel from "./Carousel";
+import imgDate from "../public/date.png";
+import imgLocation from "../public/location.png";
+import imgMembers from "../public/members.png";
 
 function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
   const [showVideo, setShowVideo] = React.useState(true);
@@ -37,10 +41,10 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
           <div className="z-10 absolute flex justify-center items-center w-full h-full rounded-md bg-black bg-opacity-40 lg:p-10 px-4 py-6">
             <div className=" flex flex-col items-center ">
               <span className="-rotate-1 rounded-lg bg-sky-100 py-px px-2 text-sm text-sky-800">
-                270 studenata je učestvovalo na konferenciji 2021. godine
+                Više od {subDetails?.participantsNumber} studenata je učestvovalo na ovom događaju
               </span>
               <h3 className="mt-2 max-w-2xl text-white text-center font-bold leading-tight text:xl lg:text-2xl xl:text-3xl md:leading-tight">
-                Ukoliko želis da pogledaš ceo video sa konferencije, klikni na
+                Ukoliko želis da pogledaš ceo video sa dogadjaja, klikni na
                 dugme ispod.
                 {showVideoOrImage ? (
                   <button
@@ -48,7 +52,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                     onClick={() => setShowVideo((prevState) => !prevState)}
                     className="cursor-pointer text-sky-500 hover:text-sky-700 duration-300"
                   >
-                    Pogledaj slike
+                    Pogledaj {showVideo ? 'slike' : 'video'}
                   </button>
                 ) : (
                   <p />
@@ -80,12 +84,11 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-inner rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center">
-                      {/* <img alt="landing" src={imgDate.src} /> */}
+                      <img alt="landing" src={imgDate.src} />
                     </div>
                     <h6 className="text-xl font-semibold">Datum</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Divide details about your product or agency work into
-                      parts. A paragraph describing a feature will be enough.
+                      {dayjs(subDetails?.startDate).format("MMM DD, YYYY")} {subDetails?.endDate && `- ${dayjs(subDetails?.endDate).format("MMM DD, YYYY")}`}
                     </p>
                   </div>
                 </div>
@@ -100,12 +103,11 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-inner rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center">
-                      {/* <img alt="landing" src={imgLocation.src} /> */}
+                      <img alt="landing" src={imgLocation.src} />
                     </div>
                     <h6 className="text-xl font-semibold">Lokacija</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Keep you user engaged by providing meaningful information.
-                      Remember that by this time, the user is curious.
+                      {subDetails?.location}
                     </p>
                   </div>
                 </div>
@@ -120,12 +122,11 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-inner rounded-lg">
                   <div className="px-4 py-5 flex-auto">
                     <div className="text-white p-3 text-center inline-flex items-center justify-center">
-                      {/* <img alt="landing" src={imgMembers.src} /> */}
+                      <img alt="landing" src={imgMembers.src} />
                     </div>
                     <h6 className="text-xl font-semibold">Učesnici</h6>
                     <p className="mt-2 mb-4 text-blueGray-500">
-                      Write a few lines about each one. A paragraph describing a
-                      feature will be enough. Keep you user engaged!
+                      Na ovom događaju je učestvavlo više od {subDetails?.participantsNumber} studenata
                     </p>
                   </div>
                 </div>
