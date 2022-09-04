@@ -16,6 +16,10 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
     else setShowVideo(false);
   }, []);
 
+  React.useEffect(() => {
+    setShowVideo(true);
+  }, [videoUrl]);
+
   const showVideoOrImage = subDetails?.videoBgUrl && subDetails?.images.length;
 
   return (
@@ -25,7 +29,13 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
         className="z-1 relative h-[calc(90vh-65px)] "
       >
         {!showVideo && <Carousel images={images} />}
-        <div className="vimeo-wrapper">
+        <motion.div
+          key={videoUrl}
+          initial={{ x: -160, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.5 }}
+          className="vimeo-wrapper"
+        >
           {showVideo && (
             <iframe
               title="Video sa konferencije 2021."
@@ -71,13 +81,14 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
               </Link>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
       <section className="pb-10 -mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
               <motion.div
+                key={videoUrl}
                 initial={{ y: 120, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}

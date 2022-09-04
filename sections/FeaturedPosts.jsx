@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import PropTypes from "prop-types";
 import "react-multi-carousel/lib/styles.css";
+import { motion } from "framer-motion";
 import { FeaturedPostCard } from "../components";
 
 const responsive = {
@@ -63,7 +64,12 @@ function FeaturedPosts({ featuredPosts }) {
   );
 
   return (
-    <div className="mb-8 mt-8">
+    <motion.div
+      initial={{ x: -160, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.3 }}
+      className="mb-8 mt-8"
+    >
       <Carousel
         infinite
         customLeftArrow={customLeftArrow}
@@ -75,13 +81,12 @@ function FeaturedPosts({ featuredPosts }) {
           <FeaturedPostCard key={post.createdAt} post={post} />
         ))}
       </Carousel>
-    </div>
+    </motion.div>
   );
 }
 
 FeaturedPosts.propTypes = {
   featuredPosts: PropTypes.arrayOf.isRequired,
 };
-
 
 export default FeaturedPosts;
