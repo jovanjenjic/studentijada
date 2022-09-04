@@ -31,9 +31,9 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
         {!showVideo && <Carousel images={images} />}
         <motion.div
           key={videoUrl}
-          initial={{ x: -160, opacity: 0 }}
+          initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.5 }}
+          transition={{ delay: 0.3 }}
           className="vimeo-wrapper"
         >
           {showVideo && (
@@ -112,6 +112,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
             </div>
             <div className="w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
               <motion.div
+                key={videoUrl}
                 initial={{ y: 120, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
@@ -133,6 +134,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
             </div>
             <div className="md:pt-6 w-full md:w-4/12 px-4 text-center transform transition duration-300 ease-in-out hover:-translate-y-2">
               <motion.div
+                key={videoUrl}
                 initial={{ y: 120, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.4 }}
