@@ -152,7 +152,11 @@ function AskForm({ slug }) {
 }
 
 AskForm.propTypes = {
-  slug: PropTypes.string.isRequired,
+  slug: PropTypes.string,
 };
+
+AskForm.defaultProps = {
+  slug: ''
+}
 
 export default AskForm;

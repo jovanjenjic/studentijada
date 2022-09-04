@@ -135,8 +135,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                       Učesnici
                     </h6>
                     <p className="text-sm lg:text-base mt-2 mb-4 text-blueGray-500">
-                      Na ovom događaju je učestvavlo više od{" "}
-                      {subDetails?.participantsNumber} studenata
+                      {subDetails?.participantsNumber}+ IT studenata Fakulteta tehničkih nauka
                     </p>
                   </div>
                 </div>

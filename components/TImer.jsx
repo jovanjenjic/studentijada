@@ -6,7 +6,7 @@ function MyTimer() {
   const [time, setTime] = useState();
 
   const { seconds, minutes, hours, days, restart } = useTimer({
-    expiryTimestamp: time,
+    expiryTimestamp: time || new Date(),
   });
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function MyTimer() {
   }, []);
 
   useEffect(() => {
-    restart(time);
+    if (time) restart(time);
   }, [time]);
 
   const dayTime = days < 10 ? `0${days}` : `${days}`;

@@ -88,6 +88,9 @@ export const getSubcategoryDetails = async (slug) => {
         endDate
         location
         participantsNumber
+        sponsorsImage {
+          url
+        }
       }
     }
   `;

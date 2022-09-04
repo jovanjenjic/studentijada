@@ -1,7 +1,7 @@
 import React from "react";
 import imgPeople from "../public/group.png";
 
-function Support() {
+function Support({ subDetails }) {
   return (
     <div
       style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 93%, 0 100%)" }}
@@ -27,7 +27,7 @@ function Support() {
           </div>
 
           <div className="flex flex-wrap justify-evenly items-center lg:mt-24 mt-12">
-            <div className="w-full md:w-5/12 px-4">
+            <div className="w-full md:w-5/12">
               <div className="text-blueGray-500 bg-white p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full">
                 <img alt="landing" src={imgPeople.src} />
               </div>
@@ -48,9 +48,9 @@ function Support() {
                 Check Notus Design System PRO!
               </a>
             </div>
-            <div className="w-full md:w-5/12 px-4 lg:mt-0 mt-14">
+            <div className="w-full md:w-5/12 lg:mt-0 mt-14">
               <img
-                src="https://www.codeference.org/cod-sajt-sponzori24.957e4867.png"
+                src={subDetails?.sponsorsImage?.url}
                 alt="support"
               />
             </div>

@@ -73,6 +73,7 @@ function Header({ categories }) {
               {categories.map((cat) =>
                 cat.subcategories.map((sub) => (
                   <div
+                    key={`${cat.slug}/${sub.slug}`}
                     role="button"
                     onClick={handleOnClick}
                     onKeyPress={handleOnClick}
