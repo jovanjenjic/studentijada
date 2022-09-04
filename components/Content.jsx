@@ -34,10 +34,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Svečano otvaranje
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
           <div
@@ -54,10 +54,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Predavanja
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
           <div
@@ -74,10 +74,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Radionice
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
           <div
@@ -93,10 +93,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Organizovan izlet
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
           <div
@@ -113,10 +113,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Druženje
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
           <div
@@ -133,10 +133,10 @@ function WhatWeDo() {
               <h3 className="text-lg leading-normal mb-2 font-semibold text-black">
                 Svečano zatvaranje
               </h3>
-              <p className="text-gray-500">
+              {/* <p className="text-gray-500">
                 This is a wider card with supporting text below as a natural
                 content.
-              </p>
+              </p> */}
             </div>
           </div>
         </div>
