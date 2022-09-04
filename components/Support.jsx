@@ -1,5 +1,5 @@
 import React from "react";
-import imgPeople from "../public/group.png";
+import imgPeople from "../public/support.png";
 
 function Support({ subDetails }) {
   return (
@@ -12,14 +12,14 @@ function Support({ subDetails }) {
           <div className="pt-6">
             <div className="mb-12 flex flex-wrap -mx-4 justify-center">
               <div className="px-4 relative w-full lg:w-8/12 text-center">
-                <span className="-rotate-1 rounded-lg bg-sky-100 py-px px-2 text-sm text-sky-800">
-                  117+ prijavljenih učesnika ove nedelje
+                <span className="-rotate-1 rounded-lg bg-red-100 py-px px-2 text-sm text-red-800">
+                  Velika zahvalnost našim sponzorima i podršci
                 </span>
                 <h3 className="lg:text-3xl text-2xl font-bold mt-3 mb-1 text-white">
                   Sponzori i podrška
                 </h3>
                 <p className="mt-2 mb-4 lg:text-xl text-lg leading-relaxed text-white">
-                  Sponzori i podrška konferencije bez koje ne bismo uspeli da je
+                  Sponzori i podrška ovog događaja bez koje ne bismo uspeli da je
                   realizujemo.
                 </p>
               </div>
@@ -32,20 +32,13 @@ function Support({ subDetails }) {
                 <img alt="landing" src={imgPeople.src} />
               </div>
               <h3 className="text-white lg:text-3xl text-xl mb-2 font-semibold leading-normal">
-                Working with us is a pleasure
+                Bilo je zadovoljstvo raditi sa našim sponzorima i podrškom
               </h3>
               <p className="lg:text-lg text-base font-light leading-relaxed mt-4 mb-4 text-white">
-                Do not let your users guess by attaching tooltips and popoves to
-                any element. Just make sure you enable them first via
-                JavaScript.
-              </p>
-              <p className="lg:text-lg text-base font-light leading-relaxed mt-4 mb-4 text-white">
-                The kit comes with three pre-built pages to help you get started
-                faster. You can change the text and images and you are good to
-                go. Just make sure you enable them first via JavaScript.
+                {subDetails?.sponsorsText}
               </p>
               <a className="font-bold text-white mt-8" href="#/">
-                Check Notus Design System PRO!
+                Radujemo se budućim događajima koje ćemo zajedno ostvariti!
               </a>
             </div>
             <div className="w-full md:w-5/12 lg:mt-0 mt-14">

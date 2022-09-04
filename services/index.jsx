@@ -91,6 +91,7 @@ export const getSubcategoryDetails = async (slug) => {
         sponsorsImage {
           url
         }
+        sponsorsText
       }
     }
   `;
