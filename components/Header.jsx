@@ -50,7 +50,10 @@ function Header() {
 
               <ul className="absolute hidden text-gray-900 pt-1 group-hover:block">
                 {cat?.subcategories.map((sub) => (
-                  <li key={`${cat.slug}/${sub.slug}`} className="rounded-b bg-blue-100 hover:bg-blue-200 py-2 px-4 block whitespace-no-wrap">
+                  <li
+                    key={`${cat.slug}/${sub.slug}`}
+                    className="rounded-b bg-blue-100 hover:bg-blue-200 py-2 px-4 block whitespace-no-wrap"
+                  >
                     <Link href={`/${cat?.slug}/${sub?.slug}`}>{sub?.name}</Link>
                   </li>
                 ))}

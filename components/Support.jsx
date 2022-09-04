@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import imgPeople from "../public/support.png";
 
 function Support({ subDetails }) {
@@ -19,8 +20,8 @@ function Support({ subDetails }) {
                   Sponzori i podrška
                 </h3>
                 <p className="mt-2 mb-4 lg:text-xl text-lg leading-relaxed text-white">
-                  Sponzori i podrška ovog događaja bez koje ne bismo uspeli da je
-                  realizujemo.
+                  Sponzori i podrška ovog događaja bez koje ne bismo uspeli da
+                  je realizujemo.
                 </p>
               </div>
             </div>
@@ -42,10 +43,7 @@ function Support({ subDetails }) {
               </a>
             </div>
             <div className="w-full md:w-5/12 lg:mt-0 mt-14">
-              <img
-                src={subDetails?.sponsorsImage?.url}
-                alt="support"
-              />
+              <img src={subDetails?.sponsorsImage?.url} alt="support" />
             </div>
           </div>
         </div>
@@ -53,5 +51,9 @@ function Support({ subDetails }) {
     </div>
   );
 }
+
+Support.propTypes = {
+  subDetails: PropTypes.arrayOf.isRequired,
+};
 
 export default Support;

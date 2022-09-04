@@ -156,7 +156,7 @@ AskForm.propTypes = {
 };
 
 AskForm.defaultProps = {
-  slug: ''
-}
+  slug: "",
+};
 
 export default AskForm;
