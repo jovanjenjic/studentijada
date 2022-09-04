@@ -65,6 +65,7 @@ function PostDetail({ post }) {
     <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
       <div className="relative overflow-hidden shadow-md mb-6">
         <motion.img
+          key={post.slug}
           initial={{ x: 160, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.2 }}
