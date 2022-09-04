@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Carousel from "react-multi-carousel";
+import PropTypes from "prop-types";
 import "react-multi-carousel/lib/styles.css";
-
 import { FeaturedPostCard } from "../components";
-import { getFeaturedPosts } from "../services";
 
 const responsive = {
   superLargeDesktop: {
@@ -24,17 +23,7 @@ const responsive = {
   },
 };
 
-function FeaturedPosts() {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
-
-  useEffect(() => {
-    getFeaturedPosts().then((result) => {
-      setFeaturedPosts(result);
-      setDataLoaded(true);
-    });
-  }, []);
-
+function FeaturedPosts({ featuredPosts }) {
   const customLeftArrow = (
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-sky-500 rounded-full">
       <svg
@@ -82,13 +71,17 @@ function FeaturedPosts() {
         responsive={responsive}
         itemClass="px-4"
       >
-        {dataLoaded &&
-          featuredPosts.map((post) => (
-            <FeaturedPostCard key={post.createdAt} post={post} />
-          ))}
+        {featuredPosts.map((post) => (
+          <FeaturedPostCard key={post.createdAt} post={post} />
+        ))}
       </Carousel>
     </div>
   );
 }
+
+FeaturedPosts.propTypes = {
+  featuredPosts: PropTypes.arrayOf.isRequired,
+};
+
 
 export default FeaturedPosts;

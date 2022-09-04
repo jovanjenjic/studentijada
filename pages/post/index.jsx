@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { FeaturedPosts } from "../../sections/index";
 import { PostCard, PostWidget } from "../../components";
-import { getPosts } from "../../services";
+import { getFeaturedPosts, getPosts } from "../../services";
 
-function Home({ posts }) {
+function Home({ posts, featuredPosts }) {
   const [sizeAndPages, setSizeAndPages] = useState({ size: 3, page: 1 });
   const postsLength = posts?.length || 0;
 
@@ -12,7 +12,7 @@ function Home({ posts }) {
 
   return (
     <div className="container mx-auto lg:px-10 px-6 mb-8">
-      <FeaturedPosts />
+      <FeaturedPosts featuredPosts={featuredPosts} />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="lg:col-span-8 col-span-1">
           {posts.slice(0, size * page).map((post) => (
@@ -59,11 +59,13 @@ export default Home;
 // Fetch data at build time
 export async function getStaticProps() {
   const posts = (await getPosts()) || [];
+  const featuredPosts = await getFeaturedPosts();
   return {
-    props: { posts },
+    props: { posts, featuredPosts },
   };
 }
 
 Home.propTypes = {
   posts: PropTypes.arrayOf.isRequired,
+  featuredPosts: PropTypes.arrayOf.isRequired,
 };
