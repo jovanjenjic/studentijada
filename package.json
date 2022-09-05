@@ -23,6 +23,7 @@
     "react-dom": "18.1.0",
     "react-multi-carousel": "^2.8.0",
     "react-scripts": "^5.0.1",
+    "react-timer-hook": "^3.0.5",
     "sass": "^1.54.0",
     "tw-elements": "^1.0.0-alpha12",
     "validator": "^13.7.0"
