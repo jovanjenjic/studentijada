@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "dayjs": "^1.11.4",
+    "emailjs-com": "^2.6.4",
     "framer-motion": "^6.5.1",
     "graphql": "^16.5.0",
     "graphql-request": "^4.3.0",
@@ -22,9 +23,9 @@
     "react-dom": "18.1.0",
     "react-multi-carousel": "^2.8.0",
     "react-scripts": "^5.0.1",
-    "react-timer-hook": "^3.0.5",
     "sass": "^1.54.0",
-    "tw-elements": "^1.0.0-alpha12"
+    "tw-elements": "^1.0.0-alpha12",
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "@types/node": "17.0.35",

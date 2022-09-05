@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { submitQuestion } from "../services";
+import validator from "validator";
+
+import emailjs from "emailjs-com";
+
+(() => {
+  emailjs.init("user_1SqBNhYaPHbhrnf53LizK");
+})();
 
 function AskForm({ slug }) {
   const [error, setError] = useState(false);
@@ -41,18 +47,15 @@ function AskForm({ slug }) {
   };
 
   const handlePostSubmission = () => {
-    setError(false);
+    const { isEmpty, isEmail } = validator;
     const { name, email, question, storeData } = formData;
-    if (!name || !email || !question) {
-      setError(true);
+
+    const isValid = isEmail(email) && !isEmpty(name) && !isEmpty(question);
+
+    setError(!isValid);
+    if (!isValid) {
       return;
     }
-    const questionObj = {
-      name,
-      email,
-      question,
-      slug,
-    };
 
     if (storeData) {
       localStorage.setItem("name", name);
@@ -62,23 +65,33 @@ function AskForm({ slug }) {
       localStorage.removeItem("email");
     }
 
-    submitQuestion(questionObj).then((res) => {
-      if (res.createQuestion) {
-        if (!storeData) {
-          formData.name = "";
-          formData.email = "";
+    emailjs
+      .send("service_qf082ms", "template_y84xuns", {
+        from_name: name,
+        reply_to: email,
+        message: question,
+      })
+      .then(
+        () => {
+          const fData = {};
+          if (!storeData) {
+            fData.email = "";
+            fData.name = "";
+          }
+          fData.question = "";
+          setFormData((prevState) => ({
+            ...prevState,
+            ...fData,
+          }));
+          setShowSuccessMessage(true);
+          setTimeout(() => {
+            setShowSuccessMessage(false);
+          }, 3000);
+        },
+        (err) => {
+          console.log("FAILED...", err);
         }
-        formData.question = "";
-        setFormData((prevState) => ({
-          ...prevState,
-          ...formData,
-        }));
-        setShowSuccessMessage(true);
-        setTimeout(() => {
-          setShowSuccessMessage(false);
-        }, 3000);
-      }
-    });
+      );
   };
 
   return (
