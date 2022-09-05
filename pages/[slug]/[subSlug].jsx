@@ -29,7 +29,6 @@ function CategoryPost({ posts, subDetails }) {
   return (
     <>
       <AfterMovieAndVideos
-        videoBgUrl={subDetails?.videoBgUrl}
         videoUrl={subDetails?.videoUrl}
         subDetails={subDetails}
         images={subDetails?.images}

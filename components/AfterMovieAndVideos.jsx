@@ -8,11 +8,11 @@ import imgDate from "../public/date.png";
 import imgLocation from "../public/location.png";
 import imgMembers from "../public/members.png";
 
-function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
+function AfterMovieAndVideos({ videoUrl, subDetails, images }) {
   const [showVideo, setShowVideo] = React.useState(true);
 
   React.useEffect(() => {
-    if (subDetails?.videoBgUrl) setShowVideo(true);
+    if (subDetails?.videoUrl) setShowVideo(true);
     else setShowVideo(false);
   }, []);
 
@@ -20,7 +20,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
     setShowVideo(true);
   }, [videoUrl]);
 
-  const showVideoOrImage = subDetails?.videoBgUrl && subDetails?.images.length;
+  const showVideoOrImage = subDetails?.videoUrl && subDetails?.images.length;
 
   return (
     <div className="relative z-10 bg-black bg-opacity-20">
@@ -30,7 +30,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
       >
         {!showVideo && <Carousel images={images} />}
         <motion.div
-          key={videoUrl}
+          key={`${videoUrl}`}
           initial={{ x: 0, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -40,7 +40,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
             <iframe
               title="Video sa konferencije 2021."
               className="w-full"
-              src={videoBgUrl}
+              src={`${videoUrl}&amp;player_id=0&amp;playsinline=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0&amp;background=1&amp;title=0`}
               allow="autoplay; fullscreen"
               frameBorder="0"
               webkitallowfullscreen
@@ -163,7 +163,6 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
 
 AfterMovieAndVideos.propTypes = {
   videoUrl: PropTypes.string.isRequired,
-  videoBgUrl: PropTypes.string.isRequired,
   subDetails: PropTypes.arrayOf.isRequired,
   images: PropTypes.arrayOf.isRequired,
 };

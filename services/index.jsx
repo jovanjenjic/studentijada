@@ -80,7 +80,6 @@ export const getSubcategoryDetails = async (slug) => {
       subcategory(where: { slug: $slug }) {
         name
         videoUrl
-        videoBgUrl
         images {
           url
         }
