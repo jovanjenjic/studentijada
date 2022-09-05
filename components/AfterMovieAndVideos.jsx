@@ -41,6 +41,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
               title="Video sa konferencije 2021."
               className="w-full"
               src={videoBgUrl}
+              allow="autoplay; fullscreen"
               frameBorder="0"
               webkitallowfullscreen
               mozallowfullscreen
