@@ -102,9 +102,7 @@ function AfterMovieAndVideos({ videoUrl, videoBgUrl, subDetails, images }) {
                     <p className="text-sm lg:text-base mt-2 mb-4 text-blueGray-500">
                       {dayjs(subDetails?.startDate).format("DD.MM.YYYY.")}{" "}
                       {subDetails?.endDate &&
-                        `- ${dayjs(subDetails?.endDate).format(
-                          "DD.MM.YYYY."
-                        )}`}
+                        `- ${dayjs(subDetails?.endDate).format("DD.MM.YYYY.")}`}
                     </p>
                   </div>
                 </div>

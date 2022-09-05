@@ -56,8 +56,8 @@ function LandingComponent() {
                     prijavi se i rezerviši svoje mesto na konferenciji
                   </span>
                   <h3 className="mt-2 max-w-2xl text-center font-bold leading-tight text:xl lg:text-2xl xl:text-3xl md:leading-tight">
-                    Da li želiš da učestvuješ na konferenciji na Zlatiboru? Popuni formu i
-                    prijavi se
+                    Da li želiš da učestvuješ na konferenciji na Zlatiboru?
+                    Popuni formu i prijavi se
                   </h3>
                   <button
                     type="button"
@@ -95,9 +95,7 @@ function LandingComponent() {
                         <img alt="landing" src={imgDate.src} />
                       </div>
                       <h6 className="text-xl font-semibold">Datum</h6>
-                      <p className="mt-2 mb-4 text-blueGray-500">
-                        24.10.2022.
-                      </p>
+                      <p className="mt-2 mb-4 text-blueGray-500">24.10.2022.</p>
                     </div>
                   </div>
                 </motion.div>
@@ -111,7 +109,7 @@ function LandingComponent() {
                       </div>
                       <h6 className="text-xl font-semibold">Lokacija</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
-                        Zlatibor - Studentsko odmaralište "Ratko Mitrović"
+                        Zlatibor - Studentsko odmaralište Ratko Mitrović
                       </p>
                     </div>
                   </div>
@@ -125,9 +123,7 @@ function LandingComponent() {
                         <img alt="landing" src={imgMembers.src} />
                       </div>
                       <h6 className="text-xl font-semibold">Učesnici</h6>
-                      <p className="mt-2 mb-4 text-blueGray-500">
-                        400+
-                      </p>
+                      <p className="mt-2 mb-4 text-blueGray-500">400+</p>
                     </div>
                   </div>
                 </motion.div>
