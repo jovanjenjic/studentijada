@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const END_TIME = "10 24 2022";
+const END_TIME = "10/24/2022";
 
 const calcTime = () => {
   let endTime = new Date(END_TIME);
