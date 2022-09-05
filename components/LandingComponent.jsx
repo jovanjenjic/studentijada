@@ -53,10 +53,10 @@ function LandingComponent() {
               <div className="w-full max-w-4xl rounded-md border-2 border-gray-100 bg-white bg-opacity-40 lg:p-10 px-4 py-6">
                 <div className="flex flex-col items-center">
                   <span className="-rotate-1 rounded-lg bg-yellow-100 py-px px-2 text-sm text-yellow-800">
-                    117+ prijavljenih učesnika ove nedelje
+                    prijavi se i rezerviši svoje mesto na konferenciji
                   </span>
                   <h3 className="mt-2 max-w-2xl text-center font-bold leading-tight text:xl lg:text-2xl xl:text-3xl md:leading-tight">
-                    Da li želiš da učestvuješ na konferenciji? Popuni formu i
+                    Da li želiš da učestvuješ na konferenciji na Zlatiboru? Popuni formu i
                     prijavi se
                   </h3>
                   <button
@@ -96,8 +96,7 @@ function LandingComponent() {
                       </div>
                       <h6 className="text-xl font-semibold">Datum</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
-                        Divide details about your product or agency work into
-                        parts. A paragraph describing a feature will be enough.
+                        24.10.2022.
                       </p>
                     </div>
                   </div>
@@ -112,9 +111,7 @@ function LandingComponent() {
                       </div>
                       <h6 className="text-xl font-semibold">Lokacija</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
-                        Keep you user engaged by providing meaningful
-                        information. Remember that by this time, the user is
-                        curious.
+                        Zlatibor - Studentsko odmaralište "Ratko Mitrović"
                       </p>
                     </div>
                   </div>
@@ -129,8 +126,7 @@ function LandingComponent() {
                       </div>
                       <h6 className="text-xl font-semibold">Učesnici</h6>
                       <p className="mt-2 mb-4 text-blueGray-500">
-                        Write a few lines about each one. A paragraph describing
-                        a feature will be enough. Keep you user engaged!
+                        400+
                       </p>
                     </div>
                   </div>

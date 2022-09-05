@@ -42,7 +42,7 @@ function PostWidget({ subcategoryName, slug }) {
           </div>
           <div className="flex-grow ml-4">
             <p className="text-gray-500 font-xs">
-              {dayjs(post?.date || post.createdAt).format("MMM DD, YYYY")}
+              {dayjs(post?.date || post.createdAt).format("DD.MM.YYYY.")}
             </p>
             <Link
               href={`/post/${post.slug}`}

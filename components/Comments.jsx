@@ -27,7 +27,7 @@ function Comments({ slug }) {
           >
             <p className="mb-4">
               <span className="font-semibold">{comment.name}</span> on{" "}
-              {dayjs(comment.createdAt).format("MMM DD, YYYY")}
+              {dayjs(comment.createdAt).format("DD.MM.YYYY.")}
             </p>
             <p className="whitespace-pre-line text-gray-600 w-full">
               {parse(comment.comment)}

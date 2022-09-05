@@ -57,7 +57,7 @@ function PostCard({ post }) {
               />
             </svg>
             <span className="align-middle">
-              {dayjs(post?.date || post?.createdAt).format("MMM DD, YYYY")}
+              {dayjs(post?.date || post?.createdAt).format("DD.MM.YYYY.")}
             </span>
           </div>
         </div>
