@@ -40,7 +40,7 @@ function AfterMovieAndVideos({ videoUrl, subDetails, images }) {
             <iframe
               title="Video sa konferencije 2021."
               className="w-full"
-              src={`${videoUrl}&amp;player_id=0&amp;playsinline=0&amp;app_id=58479&amp;autoplay=1&amp;loop=1&amp;muted=1&amp;controls=0&amp;background=1&amp;title=0`}
+              src={`${videoUrl};player_id=0;playsinline=0;app_id=58479;autoplay=1;loop=1;muted=1;controls=0;background=1;title=0`}
               allow="autoplay; fullscreen"
               frameBorder="0"
               webkitallowfullscreen
