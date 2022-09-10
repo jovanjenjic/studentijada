@@ -5,11 +5,11 @@ import Footer from "./Footer";
 
 function Layout({ children }) {
   return (
-    <>
+    <div className="h-screen flex flex-col justify-between">
       <Header />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }
 

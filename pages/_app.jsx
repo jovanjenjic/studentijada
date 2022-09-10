@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 import { AnimatePresence } from "framer-motion";
 import { Layout } from "../components";
 import "../styles/globals.scss";
-import "../styles/card.css";
-import "../styles/afterMovie.css";
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {

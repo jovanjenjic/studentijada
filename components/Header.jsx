@@ -1,77 +1,76 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
-import imgLogo from "../public/logo-crni.png";
-import { getCategories } from "../services";
-import HamburgerMenu from "./HamburgerMenu";
+import { useScrollPosition } from "../hook/useScrollPosition";
+import logoUnijeWhite from "../public/logoUnijeWhite.png";
+import logoUnijeDark from "../public/logoUnijeDark.png";
 
 function Header() {
-  const [categories, setCategories] = useState([]);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    getCategories().then((newCategories) => {
-      setCategories(newCategories);
-    });
-  }, []);
+  const scrollPosition = useScrollPosition();
 
   return (
-    <nav className="sticky top-0 z-50 bg-blue-50 shadow-sm">
-      <div className="md:flex items-center justify-between py-2 px-8 md:px-12">
-        <div className="flex justify-between items-center">
-          <div className="text-2xl font-bold text-gray-800 md:text-3xl w-44 cursor-pointer">
-            <Link href="/">
-              <img src={imgLogo.src} alt="logo" />
-            </Link>
-          </div>
-          <div className="md:hidden">
-            <HamburgerMenu
-              categories={categories}
-              open={open}
-              setOpen={setOpen}
+    <nav
+      id="header"
+      className={`${
+        scrollPosition > 0 ? "bg-white" : "bg-transparent"
+      } duration-300 fixed w-full z-30 top-0 text-white sticky`}
+    >
+      <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
+        <div className="pl-4 flex items-center">
+          <Link
+            className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+            href="/"
+          >
+            <img
+              alt="Logo unija"
+              width="180"
+              src={
+                scrollPosition > 0 ? logoUnijeDark?.src : logoUnijeWhite?.src
+              }
             />
-          </div>
+          </Link>
         </div>
-        <div className="flex flex-col md:flex-row hidden md:block -mx-2 my-auto">
-          {categories.map((cat) => (
-            <div className="group inline-block relative" key={cat.slug}>
-              <button
-                type="button"
-                className="text-gray-700 font-semibold py-2 px-4 rounded inline-flex items-center"
-              >
-                <span className="mr-1">{cat?.name}</span>
-                <svg
-                  className="fill-current h-4 w-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </button>
-
-              <ul className="absolute hidden text-gray-900 pt-1 group-hover:block">
-                {cat?.subcategories.map((sub) => (
-                  <li
-                    key={`${cat.slug}/${sub.slug}`}
-                    className="rounded-b bg-blue-100 hover:bg-blue-200 py-2 px-4 block whitespace-no-wrap"
-                  >
-                    <Link href={`/${cat?.slug}/${sub?.slug}`}>{sub?.name}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-          <Link href="/">
-            <span className="md:float-right  py-2 px-4 rounded inline-flex items-center ml-4 font-semibold cursor-pointer ">
-              Početna
-            </span>
-          </Link>
-          <Link href="/post">
-            <span className="md:float-right  py-2 px-4 rounded inline-flex items-center ml-4 font-semibold cursor-pointer ">
-              Vesti
-            </span>
-          </Link>
+        <div className="block lg:hidden pr-4">
+          <button
+            id="nav-toggle"
+            className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+          >
+            <svg
+              className="fill-current h-6 w-6"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <title>Menu</title>
+              <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+            </svg>
+          </button>
+        </div>
+        <div
+          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
+          id="nav-content"
+        >
+          <ul className="list-reset lg:flex justify-end flex-1 items-center">
+            <li
+              className={`${
+                scrollPosition > 0 ? "text-black" : "text-white"
+              }  inline-block py-2 px-4  font-bold no-underline mr-3`}
+            >
+              <Link href="/">Početna</Link>
+            </li>
+            <li
+              className={`${
+                scrollPosition > 0 ? "text-black" : "text-white"
+              }  inline-block py-2 px-4  font-bold no-underline mr-3`}
+            >
+              <Link href="/join">Učlani se</Link>
+            </li>
+          </ul>
         </div>
       </div>
+      <hr
+        className={`border-b ${
+          scrollPosition > 0 ? "border-gray-900" : "border-gray-100"
+        } opacity-25 my-0 py-0`}
+      />
     </nav>
   );
 }
