@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import logoUnijeUspravanDark from "../public/logoUnijeUspravanDark.png";
 

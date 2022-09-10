@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { MiddleWaveComponent, MiddleWaveComponentRevarse } from "../components";
 import { AboutUs, EventsPosts, Landing, Team } from "../sections";
 import { getEvents } from "../services";
 
-export default function Home({ events }) {
+function Home({ events }) {
   return (
     <div>
       <Landing />
@@ -22,7 +23,10 @@ export default function Home({ events }) {
         <h3 className="my-4 text-3xl leading-tight">
           Main Hero Message to sell yourself!
         </h3>
-        <button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
+        <button
+          type="button"
+          className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
+        >
           Action!
         </button>
       </section>
@@ -38,3 +42,9 @@ export async function getStaticProps({ params }) {
     props: { events },
   };
 }
+
+Home.propTypes = {
+  events: PropTypes.arrayOf.isRequired,
+};
+
+export default Home;

@@ -64,16 +64,16 @@ function EventsPosts({ eventPosts }) {
 
   return (
     <section className="bg-white border-b py-20">
-       <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
-          Projekti i dogadjaji
-        </h2>
-        <div className="w-full mb-4">
-          <div className="h-1 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 w-1/4 opacity-25 my-0 py-0 rounded-t" />
-        </div>
+      <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+        Projekti i dogadjaji
+      </h2>
+      <div className="w-full mb-4">
+        <div className="h-1 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 w-1/4 opacity-25 my-0 py-0 rounded-t" />
+      </div>
 
       <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
-        Ispod se nalazi deo projekata i dogadjaji koje su organizovali nasi clanovi
-        i koji se idalje organizuju nekoliko puta godisnje
+        Ispod se nalazi deo projekata i dogadjaji koje su organizovali nasi
+        clanovi i koji se idalje organizuju nekoliko puta godisnje
       </p>
       <div className="w-4/5 mx-auto">
         <div className="mb-8 mt-8 ">
@@ -95,7 +95,7 @@ function EventsPosts({ eventPosts }) {
 }
 
 EventsPosts.propTypes = {
-  EventsPosts: PropTypes.arrayOf.isRequired,
+  eventPosts: PropTypes.arrayOf.isRequired,
 };
 
 export default EventsPosts;

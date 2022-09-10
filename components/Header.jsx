@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { useScrollPosition } from "../hook/useScrollPosition";
+import useScrollPosition from "../hook/useScrollPosition";
 import logoUnijeWhite from "../public/logoUnijeWhite.png";
 import logoUnijeDark from "../public/logoUnijeDark.png";
 
@@ -31,6 +31,7 @@ function Header() {
         </div>
         <div className="block lg:hidden pr-4">
           <button
+            type="button"
             id="nav-toggle"
             className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >

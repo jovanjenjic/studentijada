@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import aboutUs from "../public/aboutUs.png";
 import mission from "../public/mission.png";
 import vision from "../public/vision.png";
@@ -83,9 +82,5 @@ function AboutUs() {
     </section>
   );
 }
-
-AboutUs.propTypes = {
-  bgColor: PropTypes.string,
-};
 
 export default AboutUs;
