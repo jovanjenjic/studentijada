@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-const HamburgerMenu = () => {
+function HamburgerMenu() {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -68,7 +68,6 @@ const HamburgerMenu = () => {
               >
                 <Link href="/join">Učlani se</Link>
               </div>
-             
             </ul>
           </div>
         </section>

@@ -32,11 +32,7 @@ function Header() {
           </Link>
         </div>
         <div className="block lg:hidden pr-4">
-          <HamburgerMenu
-            categories={[]}
-            open={open}
-            setOpen={setOpen}
-          />
+          <HamburgerMenu categories={[]} open={open} setOpen={setOpen} />
         </div>
         <div
           className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
