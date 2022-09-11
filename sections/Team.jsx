@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 function Team() {
   return (
-    <section className="bg-gray-100 dark:bg-gray-900">
+    <section className="bg-gray-100">
       <div className="container px-6 py-10 mx-auto">
         <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
           Prestavnici departmana

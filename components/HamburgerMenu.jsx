@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import PropTypes from "prop-types";
-
-function Header({ categories }) {
+const HamburgerMenu = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleOnClick = () => {
@@ -57,7 +55,7 @@ function Header({ categories }) {
                 onClick={handleOnClick}
                 onKeyPress={handleOnClick}
                 tabIndex={0}
-                className="font-bold border-b border-gray-900 my-8 uppercase"
+                className="font-bold border-b text-gray-900 border-gray-900 my-8 uppercase"
               >
                 <Link href="/">Početna stranica</Link>
               </div>
@@ -66,24 +64,11 @@ function Header({ categories }) {
                 onClick={handleOnClick}
                 onKeyPress={handleOnClick}
                 tabIndex={0}
-                className="font-bold border-b border-gray-900 my-8 uppercase"
+                className="font-bold border-b text-gray-900 border-gray-900 my-8 uppercase"
               >
-                <Link href="/post">Vesti</Link>
+                <Link href="/join">Učlani se</Link>
               </div>
-              {categories.map((cat) =>
-                cat.subcategories.map((sub) => (
-                  <div
-                    key={`${cat.slug}/${sub.slug}`}
-                    role="button"
-                    onClick={handleOnClick}
-                    onKeyPress={handleOnClick}
-                    tabIndex={0}
-                    className="font-bold border-b border-gray-900 my-8 uppercase"
-                  >
-                    <Link href={`/${cat?.slug}/${sub?.slug}`}>{sub?.name}</Link>
-                  </div>
-                ))
-              )}
+             
             </ul>
           </div>
         </section>
@@ -110,8 +95,4 @@ function Header({ categories }) {
   );
 }
 
-Header.propTypes = {
-  categories: PropTypes.arrayOf.isRequired,
-};
-
-export default Header;
+export default HamburgerMenu;
