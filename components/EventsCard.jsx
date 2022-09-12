@@ -1,7 +1,6 @@
 import React from "react";
 import dayjs from "dayjs";
 import Image from "next/image";
-import Link from "next/link";
 import PropTypes from "prop-types";
 
 function EventsCard({ post }) {
