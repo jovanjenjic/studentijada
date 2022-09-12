@@ -33,9 +33,9 @@ function EventsCard({ post }) {
           </p>
         </div>
       </div>
-      <Link href={`/post/${post.slug}`}>
+      {/* <Link href={`/post/${post.slug}`}>
         <span className="cursor-pointer absolute w-full h-full" />
-      </Link>
+      </Link> */}
     </div>
   );
 }
