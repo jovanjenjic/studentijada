@@ -14,15 +14,13 @@ function Header() {
       id="header"
       className={`${
         scrollPosition > 0 ? "bg-white" : "bg-transparent"
-      } duration-300 fixed w-full z-30 top-0 text-white sticky`}
+      } duration-300 w-full z-30 text-white sticky top-0`}
     >
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
-          <Link
-            className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-            href="/"
-          >
+          <Link href="/">
             <img
+              className="cursor-pointer"
               alt="Logo unija"
               width="180"
               src={
