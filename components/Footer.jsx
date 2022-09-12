@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from "react";
 import logoUnijeUspravanDark from "../public/logoUnijeUspravanDark.png";
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -20,61 +21,33 @@ function Footer() {
             </a>
           </div>
           <div className="flex-1">
-            <p className="uppercase text-gray-500 md:mb-6">Links</p>
+            <p className="uppercase text-gray-500 md:mb-6">Stranice</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
+                <Link
+                  href="/"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
-                  FAQ
-                </a>
+                  Početna
+                </Link>
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
+                <Link
+                  href="/join"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
-                  Help
-                </a>
-              </li>
-              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  className="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                >
-                  Support
-                </a>
+                  Učlani se
+                </Link>
               </li>
             </ul>
           </div>
           <div className="flex-1">
-            <p className="uppercase text-gray-500 md:mb-6">Legal</p>
+            <p className="uppercase text-gray-500 md:mb-6">Društvene mreze</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
-                  className="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                >
-                  Terms
-                </a>
-              </li>
-              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  className="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                >
-                  Privacy
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="flex-1">
-            <p className="uppercase text-gray-500 md:mb-6">Social</p>
-            <ul className="list-reset mb-6">
-              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
+                  href="https://www.facebook.com/groups/1943554672551357"
+                  target="_blank"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
                   Facebook
@@ -82,7 +55,8 @@ function Footer() {
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.linkedin.com/company/studentska-unija-fakulteta-tehni%C4%8Dkih-nauka/about/"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
                   Linkedin
@@ -90,39 +64,25 @@ function Footer() {
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.instagram.com/studentskaunija.ftn/"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
-                  Twitter
+                  Instagram
                 </a>
               </li>
             </ul>
           </div>
           <div className="flex-1">
-            <p className="uppercase text-gray-500 md:mb-6">Company</p>
+            <p className="uppercase text-gray-500 md:mb-6">Projekti</p>
             <ul className="list-reset mb-6">
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <a
-                  href="#"
+                  target="_blank"
+                  href="https://www.codeference.org/"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
-                  Official Blog
-                </a>
-              </li>
-              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  className="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                >
-                  About Us
-                </a>
-              </li>
-              <li className="mt-2 inline-block mr-2 md:block md:mr-0">
-                <a
-                  href="#"
-                  className="no-underline hover:underline text-gray-800 hover:text-pink-500"
-                >
-                  Contact
+                  Codeference
                 </a>
               </li>
             </ul>
