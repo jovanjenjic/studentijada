@@ -56,6 +56,10 @@ function Header() {
           setShowSuccess(true);
           setFormData(initData);
           setLoading(false);
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+          });
         })
         .catch(() => {
           setShowError(true);
