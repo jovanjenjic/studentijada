@@ -50,7 +50,7 @@ function Header() {
       setLoading(true);
       axios
         .post(
-          "https://sheet.best/api/sheets/8bff0c00-f978-426a-8140-67d9b26653c9",
+          "https://sheetdb.io/api/v1/1ex8s5zncq74w",
           data
         )
         .then(() => {
@@ -76,7 +76,7 @@ function Header() {
   return (
     <section className="py-1 bg-blueGray-50 mt-24">
       <div className=" w-full lg:w-8/12 px-4 mx-auto mt-6">
-        <div className="bg-slate-100 relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg border-0">
+        <div className="bg-white relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg border-0">
           <div className="rounded-t bg-white mb-0 px-6 py-6 lg:flex justify-center lg:justify-between">
             <div className="text-center flex justify-center">
               <h6 className="text-blueGray-700 text-xl font-bold m-auto">
@@ -84,7 +84,7 @@ function Header() {
               </h6>
             </div>
             {showSuccess && (
-              <div className="text-center flex justify-center">
+              <div className="text-center flex justify-center mr-8">
                 <h6 className="text-blueGray-700 text-xl font-bold lg:pt-0 pt-4">
                   <div
                     className="bg-green-100 rounded-lg py-5 px-6 text-base text-green-700"
@@ -124,11 +124,11 @@ function Header() {
                   <input
                     id="ime"
                     type="text"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.ime
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
-                    } w-full ease-linear transition-all duration-150`}
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50   ${
+                      formDataError?.ime
+                      ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
+                    } w-full border ease-linear transition-all duration-150`}
                     placeholder="Ime"
                     value={formData?.ime}
                     onChange={(e) => onInputChange("ime", e.target.value)}
@@ -146,10 +146,10 @@ function Header() {
                   <input
                     id="prezime"
                     type="text"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.prezime
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
+                      formDataError?.prezime
+                        ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
                     } w-full ease-linear transition-all duration-150`}
                     placeholder="Prezime"
                     value={formData?.prezime}
@@ -168,10 +168,10 @@ function Header() {
                   <input
                     id="brTelefona"
                     type="number"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.brTelefona
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
+                      formDataError?.brTelefona
+                        ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
                     } w-full ease-linear transition-all duration-150`}
                     placeholder="Broj telefona"
                     value={formData?.brTelefona}
@@ -191,10 +191,10 @@ function Header() {
                   </label>
                   <input
                     type="email"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.email
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
+                      formDataError?.email
+                        ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
                     } w-full ease-linear transition-all duration-150`}
                     placeholder="neko@example.com"
                     value={formData?.email}
@@ -212,7 +212,7 @@ function Header() {
                   </label>
                   <input
                     type="text"
-                    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ring-orange-300 w-full ease-linear transition-all duration-150"
+                    className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ring-orange-300 w-full ease-linear transition-all duration-150 outline-orange-200"
                     placeholder="Janka Veselinovića 22, Novi Sad"
                     value={formData?.adresa}
                     onChange={(e) => onInputChange("adresa", e.target.value)}
@@ -237,10 +237,10 @@ function Header() {
                   </label>
                   <input
                     type="text"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.smer
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
+                      formDataError?.smer
+                        ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
                     } w-full ease-linear transition-all duration-150`}
                     placeholder="Računarstvo i automatika"
                     value={formData?.smer}
@@ -258,10 +258,10 @@ function Header() {
                   </label>
                   <input
                     type="text"
-                    className={`border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ${
-                      !formDataError?.godinaStudija
-                        ? `ring-orange-300`
-                        : `border-2 border-rose-600 ring-red-300`
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
+                      formDataError?.godinaStudija
+                        ? "border-red-500 outline-red-400"
+                      : "outline-orange-200"
                     } w-full ease-linear transition-all duration-150`}
                     placeholder="Prva"
                     value={formData?.godinaStudija}
@@ -281,7 +281,7 @@ function Header() {
                   </label>
                   <input
                     type="email"
-                    className="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ring-orange-300 w-full ease-linear transition-all duration-150"
+                    className="px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ring-orange-300 w-full ease-linear transition-all duration-150 outline-orange-200"
                     placeholder="2022"
                     value={formData?.godinaUpisa}
                     onChange={(e) =>
@@ -308,7 +308,7 @@ function Header() {
                   </label>
                   <textarea
                     type="text"
-                    className="h-20 max-h-20 border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none outline-none focus:ring-2 ring-orange-300 w-full ease-linear transition-all duration-150"
+                    className="h-20 max-h-20 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ring-orange-300 w-full ease-linear transition-all duration-150 outline-orange-200"
                     placeholder="Tekst"
                     value={formData?.infoKorisnik}
                     onChange={(e) =>
@@ -326,13 +326,14 @@ function Header() {
           <button
             onClick={onSubmitHandler}
             type="button"
-            className="flex justify-center text-white	font-bold	 bg-gradient-to-r from-yellow-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 rounded-lg text-sm px-5 py-2.5 text-center mx-12 mb-4"
+            disabled={loading}
+            className="flex justify-center text-white	font-bold	 bg-gradient-to-r from-yellow-500 to-orange-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none disabled:opacity-25 disabled:cursor-not-allowed focus:ring-red-100 rounded-lg text-sm px-5 py-2.5 text-center mx-12 mb-4"
           >
             {loading && (
               <div role="status" className="flex justify-center">
                 <svg
                   aria-hidden="true"
-                  className="mr-2 w-5 h-8 text-gray-200 animate-spin fill-blue-600"
+                  className="mt-1 mb-1 mr-2 w-4 h-4 text-gray-200 animate-spin fill-blue-600"
                   viewBox="0 0 100 101"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
