@@ -5,7 +5,7 @@ import logoUnijeWhite from "../public/logoUnijeWhite.png";
 import logoUnijeDark from "../public/logoUnijeDark.png";
 import HamburgerMenu from "./HamburgerMenu";
 
-function Header() {
+const Header = () => {
   const [open, setOpen] = useState(false);
   const scrollPosition = useScrollPosition();
 
@@ -14,7 +14,7 @@ function Header() {
       id="header"
       className={`${
         scrollPosition > 0 ? "bg-white" : "bg-transparent"
-      } duration-300 w-full z-30 text-white sticky top-0`}
+      } duration-300 w-full z-30 text-white fixed top-0`}
     >
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
