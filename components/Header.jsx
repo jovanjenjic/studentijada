@@ -5,7 +5,7 @@ import logoUnijeWhite from "../public/logoUnijeWhite.png";
 import logoUnijeDark from "../public/logoUnijeDark.png";
 import HamburgerMenu from "./HamburgerMenu";
 
-function Header() {
+const Header = () => {
   const [open, setOpen] = useState(false);
   const scrollPosition = useScrollPosition();
 
