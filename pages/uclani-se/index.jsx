@@ -14,6 +14,7 @@ const initData = {
   godinaUpisa: "",
   infoKorisnik: "",
 };
+
 const initDataError = {
   ime: false,
   prezime: false,

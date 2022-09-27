@@ -66,7 +66,7 @@ function HamburgerMenu() {
                 tabIndex={0}
                 className="font-bold border-b text-gray-900 border-gray-900 my-8 uppercase"
               >
-                <Link href="/join">Učlani se</Link>
+                <Link href="/uclani-se">Učlani se</Link>
               </div>
             </ul>
           </div>

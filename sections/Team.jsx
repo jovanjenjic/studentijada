@@ -2,7 +2,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Team() {
+const Team = () => {
   return (
     <section className="bg-gray-100">
       <div className="container px-6 py-10 mx-auto">
@@ -13,7 +13,7 @@ function Team() {
           <div className="h-1 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 w-2/5 opacity-25 my-0 py-0 rounded-t" />
         </div>
 
-        <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+        <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
           Pronadjite studenta koji pripada vašem departmanu i kontaktirajte ga
           ukoliko imate bilo kakav problem, nedoumicu ili pitanje
         </p>
@@ -26,18 +26,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Mirko Vojinović
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Elektrotehnika i računarstvo
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -52,7 +52,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -73,18 +73,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Nikolina Delić
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Građevinarstvo
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -99,7 +99,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -120,18 +120,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Strahinja Grujičić
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Arhitektura
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -146,7 +146,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -167,18 +167,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Damjan Vakanjac
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Inženjerski menadžment
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -193,7 +193,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -214,18 +214,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Žarko Nedeljkov
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Geodezija
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -240,7 +240,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -261,18 +261,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Nikola Zelić
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               GRID
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -287,7 +287,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -308,18 +308,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Andjela Živković
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Arhitektura
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -334,7 +334,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg
@@ -355,18 +355,18 @@ function Team() {
               alt=""
             />
 
-            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize dark:text-white group-hover:text-white">
+            <h1 className="mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
               Luka Binić
             </h1>
 
-            <p className="mt-2 text-gray-500 capitalize dark:text-gray-300 group-hover:text-gray-300">
+            <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-300">
               Gradjevinarstvo
             </p>
 
             <div className="flex mt-3 -mx-2">
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Facebook"
               >
                 <svg
@@ -381,7 +381,7 @@ function Team() {
 
               <a
                 href="#"
-                className="mx-2 text-gray-600 dark:text-gray-300 hover:text-gray-500 dark:hover:text-gray-300 group-hover:text-white"
+                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white"
                 aria-label="Instagram"
               >
                 <svg

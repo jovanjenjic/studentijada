@@ -33,7 +33,7 @@ function Footer() {
               </li>
               <li className="mt-2 inline-block mr-2 md:block md:mr-0">
                 <Link
-                  href="/join"
+                  href="/uclani-se"
                   className="no-underline hover:underline text-gray-800 hover:text-pink-500"
                 >
                   Učlani se

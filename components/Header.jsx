@@ -5,7 +5,7 @@ import logoUnijeWhite from "../public/logoUnijeWhite.png";
 import logoUnijeDark from "../public/logoUnijeDark.png";
 import HamburgerMenu from "./HamburgerMenu";
 
-function Header() {
+const Header = () => {
   const [open, setOpen] = useState(false);
   const scrollPosition = useScrollPosition();
 
@@ -49,7 +49,7 @@ function Header() {
                 scrollPosition > 0 ? "text-black" : "text-white"
               }  inline-block py-2 px-4  font-bold no-underline mr-3`}
             >
-              <Link href="/join">Učlani se</Link>
+              <Link href="/uclani-se">Učlani se</Link>
             </li>
           </ul>
         </div>

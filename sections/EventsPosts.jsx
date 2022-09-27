@@ -71,7 +71,7 @@ function EventsPosts({ eventPosts }) {
         <div className="h-1 mx-auto bg-gradient-to-r from-yellow-500 to-orange-500 w-1/4 opacity-25 my-0 py-0 rounded-t" />
       </div>
 
-      <p className="max-w-2xl mx-auto my-6 text-center text-gray-500 dark:text-gray-300">
+      <p className="max-w-2xl mx-auto my-6 text-center text-gray-500">
         Ispod se nalazi deo projekata i dogadjaji koje su organizovali nasi
         clanovi i koji se idalje organizuju nekoliko puta godisnje
       </p>
