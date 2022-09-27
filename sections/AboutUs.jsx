@@ -19,10 +19,14 @@ function AboutUs() {
               O nama
             </h3>
             <p className="text-gray-600 mb-8">
-              Studentska unija je vodeća i najveća studentska organizacija Fakulteta tehničkih nauka u Novom Sadu koja okuplja studente u cilju poboljšanja neformalnog obrazovanja i kvaliteta studiranja.
+              Studentska unija je vodeća i najveća studentska organizacija
+              Fakulteta tehničkih nauka u Novom Sadu koja okuplja studente u
+              cilju poboljšanja neformalnog obrazovanja i kvaliteta studiranja.
               <br />
               <br />
-              Kroz svoj rad omogućuje studentima aktivno učešće u donošenju odluka, učešću na domaćim i međunarodnim projektima kao i organizovanju neformalnih studentskih aktivnosti. 
+              Kroz svoj rad omogućuje studentima aktivno učešće u donošenju
+              odluka, učešću na domaćim i međunarodnim projektima kao i
+              organizovanju neformalnih studentskih aktivnosti.
             </p>
           </div>
           <div className="w-full sm:w-1/2 p-6">
@@ -39,9 +43,16 @@ function AboutUs() {
                 Misija
               </h3>
               <p className="text-gray-600 mb-8">
-                Studentska unija teži ostvarenju misije okupljanja grupe mladih i ambicioznih studenata koji su proaktivni i žele da unapređuju svoja znanja, veštine i kvalitet studiranja.
-                <br /><br />
-                Svoju ambiciju i organizacioni duh realizuju kroz mnogobrojne konferencije, predavanja, radionice, takmičenja ali i druga dešavanja kojima se Studentima poboljšava kvalitet studiranja, širi neformalno obrazovanje i pospešuje konekcije i sticanje novih poznanstava.
+                Studentska unija teži ostvarenju misije okupljanja grupe mladih
+                i ambicioznih studenata koji su proaktivni i žele da unapređuju
+                svoja znanja, veštine i kvalitet studiranja.
+                <br />
+                <br />
+                Svoju ambiciju i organizacioni duh realizuju kroz mnogobrojne
+                konferencije, predavanja, radionice, takmičenja ali i druga
+                dešavanja kojima se Studentima poboljšava kvalitet studiranja,
+                širi neformalno obrazovanje i pospešuje konekcije i sticanje
+                novih poznanstava.
               </p>
             </div>
           </div>
@@ -52,7 +63,11 @@ function AboutUs() {
               Vizija
             </h3>
             <p className="text-gray-600 mb-8">
-              Studentska unija kosntantno teži uključivanju što većeg broja studenata u rad same organizacije ali i privlačenje studenata ostalih fakulteta kroz razne vidove saradnji kako bi kreirali trendove studentskog organizovanja i održavali lidersku poziciju među omladinskim studentskim organizacijama. 
+              Studentska unija kosntantno teži uključivanju što većeg broja
+              studenata u rad same organizacije ali i privlačenje studenata
+              ostalih fakulteta kroz razne vidove saradnji kako bi kreirali
+              trendove studentskog organizovanja i održavali lidersku poziciju
+              među omladinskim studentskim organizacijama.
             </p>
           </div>
           <div className="w-full sm:w-1/2 p-6">
