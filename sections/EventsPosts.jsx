@@ -63,8 +63,8 @@ function EventsPosts({ eventPosts }) {
   );
 
   return (
-    <section className="bg-white border-b py-20">
-      <h2 className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+    <section className="bg-white border-b lg:py-20 py-10">
+      <h2 className="w-full my-2 lg:text-5xl text-4xl px-2 font-bold leading-tight text-center text-gray-800">
         Projekti i dogadjaji
       </h2>
       <div className="w-full mb-4">

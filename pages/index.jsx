@@ -10,7 +10,7 @@ import { getEvents } from "../services";
 
 function Home({ events }) {
   return (
-    <div>
+    <>
       <Meta
         description="Vodeća studentska organizacija na FTN-u."
         keywords="Unija, FTN, Fakultet Tehničkih nauka, FTN, Novi Sad, Student, Organizacija, Codeference, Construction, IImprovement"
@@ -39,7 +39,7 @@ function Home({ events }) {
           Action!
         </button>
       </section>
-    </div>
+    </>
   );
 }
 
