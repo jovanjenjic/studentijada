@@ -1,11 +1,17 @@
 import Link from "next/link";
 import React from "react";
+import { motion } from "framer-motion";
 
 function Landing() {
   return (
     <div className="pt-24">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-        <div className="text-white flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
+        <motion.div
+          initial={{ x: -60, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-white flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left"
+        >
           <p className="uppercase tracking-loose w-full">
             Da li si student na FTN-u?
           </p>
@@ -22,9 +28,16 @@ function Landing() {
           >
             <Link href="/uclani-se">Učlani se</Link>
           </button>
-        </div>
+        </motion.div>
         <div className="w-full md:w-3/5 py-6 text-center">
-          <img className="w-full md:w-4/5 z-50" src="hero.png" alt="hero" />
+          <motion.img
+            initial={{ x: -60, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="w-full md:w-4/5 z-50"
+            alt="hero"
+            src="hero.png"
+          />
         </div>
       </div>
     </div>
