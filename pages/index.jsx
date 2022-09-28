@@ -1,12 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { MiddleWaveComponent, MiddleWaveComponentRevarse } from "../components";
+import {
+  MiddleWaveComponent,
+  MiddleWaveComponentRevarse,
+  Meta,
+} from "../components";
 import { AboutUs, EventsPosts, Landing, Team } from "../sections";
 import { getEvents } from "../services";
 
 function Home({ events }) {
   return (
     <div>
+      <Meta
+        description="Vodeća studentska organizacija na FTN-u."
+        keywords="Unija, FTN, Fakultet Tehničkih nauka, FTN, Novi Sad, Student, Organizacija, Codeference, Construction, IImprovement"
+        title="Studentska unija FTN"
+      />
       <Landing />
       <MiddleWaveComponent />
       <AboutUs />

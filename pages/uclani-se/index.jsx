@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import axios from "axios";
 import { motion } from "framer-motion";
 
+import { Meta } from '../../components'
+
 const initData = {
   ime: "",
   prezime: "",
@@ -76,6 +78,11 @@ function Header() {
 
   return (
     <section className="py-1 bg-blueGray-50 mt-24">
+      <Meta
+        description="Vodeća studentska organizacija na FTN-u."
+        keywords="Unija, FTN, Fakultet Tehničkih nauka, FTN, Novi Sad, Student, Organizacija, Codeference, Construction, IImprovement"
+        title="Učlani se u Uniju!"
+      />
       <div className=" w-full lg:w-8/12 px-4 mx-auto mt-6">
         <motion.div
           initial={{ x: 0, opacity: 0 }}
@@ -129,11 +136,10 @@ function Header() {
                   <input
                     id="ime"
                     type="text"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50   ${
-                      formDataError?.ime
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50   ${formDataError?.ime
                       ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full border ease-linear transition-all duration-150`}
+                      } w-full border ease-linear transition-all duration-150`}
                     placeholder="Ime"
                     value={formData?.ime}
                     onChange={(e) => onInputChange("ime", e.target.value)}
@@ -151,11 +157,10 @@ function Header() {
                   <input
                     id="prezime"
                     type="text"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
-                      formDataError?.prezime
-                        ? "border-red-500 outline-red-400"
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${formDataError?.prezime
+                      ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full ease-linear transition-all duration-150`}
+                      } w-full ease-linear transition-all duration-150`}
                     placeholder="Prezime"
                     value={formData?.prezime}
                     onChange={(e) => onInputChange("prezime", e.target.value)}
@@ -173,11 +178,10 @@ function Header() {
                   <input
                     id="brTelefona"
                     type="number"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
-                      formDataError?.brTelefona
-                        ? "border-red-500 outline-red-400"
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${formDataError?.brTelefona
+                      ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full ease-linear transition-all duration-150`}
+                      } w-full ease-linear transition-all duration-150`}
                     placeholder="Broj telefona"
                     value={formData?.brTelefona}
                     onChange={(e) =>
@@ -196,11 +200,10 @@ function Header() {
                   </label>
                   <input
                     type="email"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
-                      formDataError?.email
-                        ? "border-red-500 outline-red-400"
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${formDataError?.email
+                      ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full ease-linear transition-all duration-150`}
+                      } w-full ease-linear transition-all duration-150`}
                     placeholder="neko@example.com"
                     value={formData?.email}
                     onChange={(e) => onInputChange("email", e.target.value)}
@@ -242,11 +245,10 @@ function Header() {
                   </label>
                   <input
                     type="text"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
-                      formDataError?.smer
-                        ? "border-red-500 outline-red-400"
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${formDataError?.smer
+                      ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full ease-linear transition-all duration-150`}
+                      } w-full ease-linear transition-all duration-150`}
                     placeholder="Računarstvo i automatika"
                     value={formData?.smer}
                     onChange={(e) => onInputChange("smer", e.target.value)}
@@ -263,11 +265,10 @@ function Header() {
                   </label>
                   <input
                     type="text"
-                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${
-                      formDataError?.godinaStudija
-                        ? "border-red-500 outline-red-400"
+                    className={`px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow border bg-slate-50  ${formDataError?.godinaStudija
+                      ? "border-red-500 outline-red-400"
                       : "outline-orange-200"
-                    } w-full ease-linear transition-all duration-150`}
+                      } w-full ease-linear transition-all duration-150`}
                     placeholder="Prva"
                     value={formData?.godinaStudija}
                     onChange={(e) =>
