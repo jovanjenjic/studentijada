@@ -82,7 +82,7 @@ const Team = () => {
                 aria-label="Facebook"
               >
               <img
-                alt="Logo unija"
+                alt="Logo unijaa"
                 width="25"
                 src={email?.src}
                 className="mr-2"
