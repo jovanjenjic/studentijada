@@ -26,7 +26,15 @@ const initDataError = {
   smer: false,
   godinaStudija: false,
 };
-function Header() {
+
+const validateEmail = (emailAddress = "") => {
+  return emailAddress?.match(
+    // eslint-disable-next-line
+      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+  );
+};
+
+const UclaniSe = () => {
   const [formData, setFormData] = useState(initData);
   const [formDataError, setFormDataError] = useState(initDataError);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -40,12 +48,12 @@ function Header() {
 
     const { ime, prezime, brTelefona, email, smer, godinaStudija } = formData;
 
-    if (!ime || !prezime || !brTelefona || !email || !smer || !godinaStudija) {
+    if (!ime || !prezime || !brTelefona || !email || !smer || !godinaStudija || !validateEmail(email)) {
       setFormDataError({
         ime: !ime,
         prezime: !prezime,
         brTelefona: !brTelefona,
-        email: !email,
+        email: !email || !validateEmail(email),
         smer: !smer,
         godinaStudija: !godinaStudija,
       });
@@ -96,7 +104,7 @@ function Header() {
               </h6>
             </div>
             {showSuccess && (
-              <div className="text-center flex justify-center mr-8">
+              <div className="text-center flex justify-center lg:mr-8">
                 <h6 className="text-blueGray-700 text-xl font-bold lg:pt-0 pt-4">
                   <div
                     className="bg-green-100 rounded-lg py-5 px-6 text-base text-green-700"
@@ -363,8 +371,8 @@ function Header() {
   );
 }
 
-Header.propTypes = {
+UclaniSe.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Header;
+export default UclaniSe;

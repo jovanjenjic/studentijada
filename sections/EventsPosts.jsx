@@ -85,7 +85,7 @@ function EventsPosts({ eventPosts }) {
             itemClass="px-4"
           >
             {eventPosts.map((post) => (
-              <EventsCard key={post.node?.createdAt} post={post?.node} />
+              <EventsCard key={post.node?.createdAt} event={post?.node} />
             ))}
           </Carousel>
         </div>

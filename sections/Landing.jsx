@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 function Landing() {
   return (
     <div className="pt-24">
-      <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <div className="container md:px-20 md:py-20 py-10 mx-auto flex flex-wrap flex-col md:flex-row items-center">
         <motion.div
           initial={{ x: -60, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -34,7 +34,7 @@ function Landing() {
             initial={{ x: -60, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}
-            className="w-full md:w-4/5 z-50"
+            className="w-full md:w-4/5 z-50 ml-auto"
             alt="hero"
             src="hero.png"
           />
