@@ -13,6 +13,7 @@ export const getEvents = async (hide = false) => {
             slug
             name
             exce
+            url
             image {
               url
             }

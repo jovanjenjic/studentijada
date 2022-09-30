@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 function EventsCard({ event }) {
   return (
@@ -13,10 +14,12 @@ function EventsCard({ event }) {
         <p className="duration-100 group-hover:hidden flex text-white mb-4 text-shadow font-semibold text-2xl text-center">
           {event.name}
         </p>
-        <div className="top-0 flex items-center absolute bottom-5 w-full justify-center">
-          <p className="text-center	group-hover:inline hidden align-middle text-white text-shadow ml-2 font-bold px-8">
-            {event.exce}
-          </p>
+        <div className="top-0 flex items-center absolute bottom-5 w-full justify-center cursor-pointer">
+          <Link href={event?.url}>
+            <p className="text-center	group-hover:inline hidden align-middle text-white text-shadow ml-2 font-bold px-8">
+              {event.exce}..
+            </p>
+          </Link>
         </div>
       </div>
     </div>
