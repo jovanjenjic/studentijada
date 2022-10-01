@@ -7,7 +7,7 @@ import nikolina from "../public/nikolina.jpg";
 import zarko from "../public/zarko.jpg";
 import mirko from "../public/mirko.jpg";
 import vakanjac from "../public/vakanjac.jpg";
-import zelic from "../public/zelic.png";
+import zelic from "../public/zelicc.jpg";
 import binic from "../public/binic.png";
 import strahinja from "../public/strahinja.jpg";
 
@@ -76,11 +76,6 @@ const Team = () => {
             </p>
 
             <div className="flex mt-3 -mx-2">
-                           <a
-                href="#"
-                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white flex"
-                aria-label="Facebook"
-              >
               <img
                 alt="Logo unijaa"
                 width="25"
@@ -88,7 +83,7 @@ const Team = () => {
                 className="mr-2"
               />
                 andjela.zivkovic322@gmail.com
-              </a>
+              
             </div>
           </div>
 
@@ -172,11 +167,6 @@ const Team = () => {
             </p>
 
             <div className="flex mt-3 -mx-2">
-                           <a
-                href="#"
-                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white flex"
-                aria-label="Facebook"
-              >
               <img
                 alt="Logo unija"
                 width="25"
@@ -184,7 +174,7 @@ const Team = () => {
                 className="mr-2"
               />
                 vakanjac.damjan@gmail.com
-              </a>
+              
             </div>
           </div>
 
@@ -204,11 +194,6 @@ const Team = () => {
             </p>
 
             <div className="flex mt-3 -mx-2">
-                           <a
-                href="#"
-                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white flex"
-                aria-label="Facebook"
-              >
               <img
                 alt="Logo unija"
                 width="25"
@@ -216,7 +201,7 @@ const Team = () => {
                 className="mr-2"
               />
                 zarkonedeljkov@gmail.com
-              </a>
+              
             </div>
           </div>
 
@@ -228,7 +213,7 @@ const Team = () => {
             />
 
             <h1 className="text-center mt-4 text-2xl font-semibold text-gray-700 capitalize group-hover:text-white">
-              Nikola Zelić
+              Nikola Zelić-Marković
             </h1>
 
             <p className="mt-2 text-gray-500 capitalize group-hover:text-gray-900">
@@ -236,19 +221,13 @@ const Team = () => {
             </p>
 
             <div className="flex mt-3 -mx-2">
-                           <a
-                href="#"
-                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white flex"
-                aria-label="Facebook"
-              >
               <img
                 alt="Logo unija"
                 width="25"
                 src={email?.src}
                 className="mr-2"
               />
-                niksa864@hotmail.com
-              </a>
+                nzm@uns.ac.rs
             </div>
           </div>
 
@@ -268,11 +247,6 @@ const Team = () => {
             </p>
 
             <div className="flex mt-3 -mx-2">
-                           <a
-                href="#"
-                className="mx-2 text-gray-600 hover:text-gray-500 group-hover:text-white flex"
-                aria-label="Facebook"
-              >
               <img
                 alt="Logo unija"
                 width="25"
@@ -280,7 +254,7 @@ const Team = () => {
                 className="mr-2"
               />
                 binicluka@gmail.com
-              </a>
+              
             </div>
           </div>
         </div>
