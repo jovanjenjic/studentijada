@@ -1,8 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
+import * as ga from "../lib";
 
 function EventsCard({ event }) {
+  const onOpenPost = () => {
+    ga.event({
+      action: "On event (codeference, impovement, pokreni igru...) click",
+    });
+  };
+
   return (
     <div className="group relative h-72">
       <div
@@ -15,7 +22,7 @@ function EventsCard({ event }) {
           {event.name}
         </p>
         <div className="top-0 flex items-center absolute bottom-5 w-full justify-center">
-          <Link href={event?.url}>
+          <Link href={event?.url} onClick={onOpenPost}>
             <p className="cursor-pointer text-center	md:group-hover:inline md:hidden align-middle text-white text-shadow ml-2 font-bold px-8 hover:text-orange-300 transition duration-300">
               {event.exce}..
             </p>
