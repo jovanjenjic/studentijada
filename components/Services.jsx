@@ -1,5 +1,6 @@
 import React from "react";
 import TitleComponent from "./TitleComponent";
+import djImg from '../public/img/dj.jpg';
  
 
 const titleData = {
@@ -71,7 +72,7 @@ const Services = () => {
           <div className="w-full md:w-1/3 px-4 pb-10 mr-auto ml-auto">
             <img
               alt="..."
-              src="http://studentijada.com/assets/section_01.e61d2ebb.jpg"
+              src={djImg.src}
               className="w-full align-middle rounded-lg"
             />
           </div>

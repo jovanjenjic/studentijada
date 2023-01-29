@@ -1,5 +1,7 @@
 import React from "react";
 import TitleComponent from './TitleComponent';
+import djTotti from '../public/img/djTotti.jpeg';
+import djAtila from '../public/img/djAtila.jpg';
 
 const titleData = {
   titleText: 'Ko pušta muziku?',
@@ -17,7 +19,7 @@ const DJ = () => {
         <div className="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
             <div className="grid gap-8 lg:grid-cols-2">
               <div className="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md hover:border-yellow-300 transition-all border border-red-400">
-                <img src="http://studentijada.com/assets/dj1.e5266e31.jpg" alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
+                <img src={djAtila.src} alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
                 <div className="sm:w-7/12 pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-4">
@@ -29,7 +31,7 @@ const DJ = () => {
                 </div>
               </div>
               <div className="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md hover:border-yellow-300 transition-all border border-red-400">
-                <img src="http://studentijada.com/assets/dj2.e0671d4d.jpeg" alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
+                <img src={djTotti.src} alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
                 <div className="sm:w-7/12 pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-4">
@@ -53,7 +55,7 @@ const DJ = () => {
                 </div>
               </div>
               <div className="p-1 rounded-xl group sm:flex space-x-6 bg-white bg-opacity-50 shadow-md hover:border-yellow-300 transition-all border border-red-400">
-                <img src="http://studentijada.com/assets/dj2.e0671d4d.jpeg" alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
+                <img src={djTotti.src} alt="art cover" loading="lazy" width="1000" height="667" className="h-56 sm:h-full w-full sm:w-5/12 object-cover object-top rounded-lg transition duration-500" />
                 <div className="sm:w-7/12 pl-0 p-5">
                   <div className="space-y-2">
                     <div className="space-y-4">

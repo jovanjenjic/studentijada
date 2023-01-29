@@ -8,7 +8,7 @@ const Video = () => {
         <video 
           className="video-js"
           controls
-          autoplay 
+          autoPlay 
           loop 
           src={require('../public/img/video.mp4')}
           poster={poster.src}

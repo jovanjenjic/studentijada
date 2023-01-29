@@ -12,8 +12,9 @@ function Carousel({ images, dark = false, hideNavigation = false }) {
     >
       {!hideNavigation && (
         <div className="hidden lg:flex z-20 mb-32 carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
-          {images.map((_, index) => (
+          {images.map((img, index) => (
             <button
+              key={img.src}
               type="button"
               data-bs-target="#carouselExampleCaptions"
               data-bs-slide-to={index.toString()}
@@ -28,6 +29,7 @@ function Carousel({ images, dark = false, hideNavigation = false }) {
       <div className="carousel-inner relative w-full overflow-hidden h-full">
         {images.map((img, index) => (
           <div
+            key={img.src}
             className={`carousel-item ${
               index === 0 && "active"
             } relative float-left w-full h-full`}

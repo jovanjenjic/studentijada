@@ -35,7 +35,7 @@ const Gallery = () => {
         <div className="container mx-auto px-4 pb-20">
           <div className="gallery">
             {images.map((img, index) => 
-              <figure className={`gallery__item gallery__item--${index+1}`}><img src={img?.src} alt={`Gallery image ${index+1}`} className="gallery__img" /></figure>
+              <figure key={img?.src} className={`gallery__item gallery__item--${index+1}`}><img src={img?.src} alt={`Gallery image ${index+1}`} className="gallery__img" /></figure>
             )}
           </div>
         </div>
