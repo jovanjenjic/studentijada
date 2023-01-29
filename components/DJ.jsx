@@ -1,5 +1,5 @@
-import TitleComponent from './TitleComponent';
 import React from "react";
+import TitleComponent from './TitleComponent';
 
 const titleData = {
   titleText: 'Ko pušta muziku?',

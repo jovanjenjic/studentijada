@@ -2,8 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Carousel({ images, dark = false, hideNavigation = false }) {
-
-  console.log('images', images);
   return (
     <div
       id="carouselExampleCaptions"

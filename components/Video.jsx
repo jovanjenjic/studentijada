@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const Video = () => {
   return(
     <section className="relative pt-20 bg-white">
