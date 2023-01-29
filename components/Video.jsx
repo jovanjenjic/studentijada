@@ -1,0 +1,16 @@
+import TitleComponent from './TitleComponent';
+import VideoVideo from '../assets/img/video.mp4'
+
+const Video = () => {
+  return(
+    <section className="relative pt-20 bg-white">
+      <div className="flex justify-center">
+        <video controls autoplay loop src={require('../assets/img/video.mp4')} >
+          <source src={require('../assets/img/video.mp4')} />
+        </video>
+      </div>
+    </section>
+  );
+}
+
+export default Video;

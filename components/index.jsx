@@ -1,7 +1,14 @@
 export { default as Hero } from "./Hero";
 export { default as Services } from "./Services";
-export { default as Featured } from "./Featured";
 export { default as Team } from "./Team";
 export { default as Finisher } from "./Finisher";
 export { default as Contact } from "./Contact";
+export { default as Gallery } from "./Gallery";
+export { default as TitleComponent } from "./TitleComponent";
+export { default as Wave } from "./Wave";
+export { default as WaveRevarse } from "./WaveRevarse";
+export { default as DJ } from "./DJ";
+export { default as Video } from "./Video";
+export { default as Support } from "./Support";
+export { default as Carousel } from "./Carousel";
 export { default as Meta } from "./Meta";

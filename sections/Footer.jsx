@@ -1,36 +1,26 @@
-import React from 'react'
+import React from 'react';
+import logo from '../assets/img/logo.png'
 
 
 function Footer() {
     return (
-        <footer className="relative bg-gray-300 pt-8 pb-6">
-        <div
-          className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
-          style={{ height: "80px" }}
-        >
-          <svg
-            className="absolute bottom-0 overflow-hidden"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none"
-            version="1.1"
-            viewBox="0 0 2560 100"
-            x="0"
-            y="0"
-          >
-            <polygon
-              className="text-gray-300 fill-current"
-              points="2560 0 2560 100 0 100"
-            ></polygon>
-          </svg>
-        </div>
+        <footer className="relative bg-gray-100 pt-8 pb-6">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-6/12 px-4">
               <h4 className="text-3xl font-semibold">
-                Let's keep in touch!
+                STUDENTIJADA NOVI SAD
               </h4>
+              {/* <a
+              className={
+                "title-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
+              }
+              href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+            >
+              <img src={logo?.src} alt="art cover" loading="lazy" class="h-22 w-auto object-cover object-top rounded-lg transition duration-500" />
+            </a> */}
               <h5 className="text-lg mt-0 mb-2 text-gray-700">
-                Find us on any of these platforms, we respond 1-2 business days.
+                Klikni na ikonicu ispod i pronadji nas na nekoj od drustvenih mreža!
               </h5>
               <div className="mt-6">
                 <button
@@ -61,7 +51,7 @@ function Footer() {
             </div>
             <div className="w-full lg:w-6/12 px-4">
               <div className="flex flex-wrap items-top mb-6">
-                <div className="w-full lg:w-4/12 px-4 ml-auto">
+                <div className="w-full lg:w-4/12 px-4 ml-auto pt-10 ">
                   <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
                     Useful Links
                   </span>
@@ -89,34 +79,6 @@ function Footer() {
 
                   </ul>
                 </div>
-                <div className="w-full lg:w-4/12 px-4">
-                  <span className="block uppercase text-gray-600 text-sm font-semibold mb-2">
-                    Other Resources
-                  </span>
-                  <ul className="list-unstyled">
-                    <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT License
-                    </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/terms">Terms & Conditions
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/privacy">Privacy Policy
-                      </a>
-                    </li>
-                    <li>
-                      <a className="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                        href="https://creative-tim.com/contact-us">Contact Us
-                      </a>
-                    </li>
-                  </ul>
-
-                </div>
               </div>
             </div>
           </div>
@@ -124,12 +86,12 @@ function Footer() {
           <div className="flex flex-wrap items-center md:justify-between justify-center">
             <div className="w-full md:w-4/12 px-4 mx-auto text-center">
               <div className="text-sm text-gray-600 font-semibold py-1">
-                Copyright © {new Date().getFullYear()}{" "}Tailwind Starter Kit by{" "}
+                Copyright © {new Date().getFullYear()}{" "}Studentijada Novi Sad{" "}
                 <a
                   href="https://www.creative-tim.com"
                   className="text-gray-600 hover:text-gray-900"
                 >
-                  Creative Tim
+                  Tim
                 </a>.
               </div>
             </div>
