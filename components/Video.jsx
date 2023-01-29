@@ -1,5 +1,5 @@
 import React from "react";
-import poster from '../public/img/poster.jpg';
+import poster from '../public/img/poster01.png';
 
 const Video = () => {
   return(
