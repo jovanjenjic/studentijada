@@ -1,11 +1,19 @@
 import React from "react";
+import poster from '../public/img/poster.jpg';
 
 const Video = () => {
   return(
     <section className="relative pt-20 bg-white">
-      <div className="flex justify-center">
-        <video controls autoplay loop src={require('../public/img/video.mp4')} >
-          <source src={require('../public/img/video.mp4')} />
+      <div className="flex justify-center lg:w-3/5 px-5 lg:px-0 m-auto">
+        <video 
+          className="video-js"
+          controls
+          autoplay 
+          loop 
+          src={require('../public/img/video.mp4')}
+          poster={poster.src}
+        >
+          <source  src={require('../public/img/video.mp4')} />
         </video>
       </div>
     </section>
