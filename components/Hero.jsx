@@ -17,15 +17,27 @@ const Hero = () => {
       <div className="container relative mx-auto">
         <div className="items-center flex flex-wrap">
           <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-            <div className="pr-12">
-              <h1 className="text-white font-semibold text-5xl">
-                Your story starts with us.
-                  </h1>
-              <p className="mt-4 text-lg text-gray-300">
-                This is a simple example of a Landing Page you can build
-                using Tailwind Starter Kit. It features multiple CSS
-                components based on the Tailwindcss design system.
-                  </p>
+            <div className="text-white font-semibold text-3xl md:text-4xl xl:text-6xl 2xl:text-8xl">
+              <div className="flex pb-4">
+                <p className='text-red-500'>20+</p>
+                <p className='pl-3'>Fakulteta</p>
+              </div>
+              <div className="flex pb-4">
+                <p className='text-red-500'>Svi</p>
+                <p className='pl-3'>Domovi</p>
+              </div>
+              <div className="flex pb-4">
+                <p className='text-red-500'>Sve</p>
+                <p className='pl-3'>Akademije</p>
+              </div>
+            </div>
+            <div className='flex justify-start flex-col lg:flex-row'>
+              <a href="www.tailus.io" className="mb-4 font-semibold lg:mr-4 rounded-3xl transition-all duration-500 bg-red-500 border border-transparent hover:border-white hover:bg-transparent text-white lg:px-16 lg:py-3 py-2">
+                PROČITAJ VIŠE
+              </a>
+              <a href="www.tailus.io" className="mb-4 font-semibold rounded-3xl transition-all duration-500 bg-transparent border border-red-500 hover:bg-red-500 text-white lg:px-16 lg:py-3 py-2">
+                KUPI KARTU
+              </a>
             </div>
           </div>
 
