@@ -1,3 +1,5 @@
+import React from "react";
+
 import Layout from '../sections/Layout'
 import { Hero, Services, Team, Finisher, Contact, Gallery, Wave, WaveRevarse, DJ, Video, Support } from '../components';
 

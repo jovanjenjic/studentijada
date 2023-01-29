@@ -1,5 +1,5 @@
-import TitleComponent from './TitleComponent';
-import VideoVideo from '../assets/img/video.mp4'
+import React from "react";
+
 
 const Video = () => {
   return(

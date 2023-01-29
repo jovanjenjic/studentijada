@@ -1,3 +1,4 @@
+import React from "react";
 
 const TitleComponent = ({ titleText, subtitleText, subtitleTextSecond, colorText, backgroundText, backgroundColor }) => {
   return (

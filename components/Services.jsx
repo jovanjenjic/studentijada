@@ -1,4 +1,6 @@
 import TitleComponent from "./TitleComponent";
+import React from "react";
+ 
 
 const titleData = {
   titleText: 'Dobrodošli na najveću studentsku žurku!',

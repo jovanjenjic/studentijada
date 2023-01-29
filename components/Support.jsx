@@ -1,4 +1,5 @@
 import TitleComponent from "./TitleComponent";
+import React from "react";
 
 const titleData = {
   backgroundText: 'PODRSKA',

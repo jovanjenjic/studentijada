@@ -1,3 +1,5 @@
+import React from "react";
+
 const Contact = ()=> {
   return (
     <section className="relative block py-10 bg-red-500">

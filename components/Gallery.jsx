@@ -1,4 +1,6 @@
 import TitleComponent from './TitleComponent';
+import React from "react";
+
 import Image01 from '../assets/img/zurka05.jpg';
 import Image02 from '../assets/img/zurka01.jpg';
 import Image03 from '../assets/img/zurka02.jpg';
