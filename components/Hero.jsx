@@ -1,5 +1,5 @@
 import React from 'react';
-import LandingImg from '../assets/img/Landing01.jpg';
+import LandingImg from '../public/img/Landing01.jpg';
 
 /// Page Sections
 const Hero = () => {

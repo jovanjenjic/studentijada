@@ -1,9 +1,9 @@
 import React from "react";
 
-import "../assets/styles/index.css"
-// import "../assets/styles/main.scss"
-import "../assets/styles/gallery.css";
-import "../assets/styles/TitleComponent.css";
+import "../public/styles/index.css"
+// import "../public/styles/main.scss"
+import "../public/styles/gallery.css";
+import "../public/styles/TitleComponent.css";
 import '@fortawesome/fontawesome-free/css/all.min.css'
 
 function App({ Component, pageProps }) {

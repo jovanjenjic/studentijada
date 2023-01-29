@@ -1,8 +1,8 @@
 import React from "react";
-import TeamImg01 from '../assets/img/team-1-800x800.jpg';
-import TeamImg02 from '../assets/img/team-2-800x800.jpg';
-import TeamImg03 from '../assets/img/team-3-800x800.jpg';
-import TeamImg04 from '../assets/img/team-4-470x470.png';
+import TeamImg01 from '../public/img/team-1-800x800.jpg';
+import TeamImg02 from '../public/img/team-2-800x800.jpg';
+import TeamImg03 from '../public/img/team-3-800x800.jpg';
+import TeamImg04 from '../public/img/team-4-470x470.png';
 import TitleComponent from './TitleComponent';
 
 const titleData = {
