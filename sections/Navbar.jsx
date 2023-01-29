@@ -21,7 +21,7 @@ function Navbar(props) {
               }
               href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
             >
-              <img src={logo?.src} alt="art cover" loading="lazy" class="h-6 w-auto object-cover object-top rounded-lg transition duration-500" />
+              <img src={logo?.src} alt="art cover" loading="lazy" className="h-6 w-auto object-cover object-top rounded-lg transition duration-500" />
             </a>
             <button
               className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"

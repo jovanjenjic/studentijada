@@ -33,9 +33,9 @@ const Gallery = () => {
         <TitleComponent {...titleData} />
       <div className="mx-auto w-full sm:w-2/3 m-auto hidden sm:grid">
         <div className="container mx-auto px-4 pb-20">
-          <div class="gallery">
+          <div className="gallery">
             {images.map((img, index) => 
-              <figure class={`gallery__item gallery__item--${index+1}`}><img src={img?.src} alt={`Gallery image ${index+1}`} class="gallery__img" /></figure>
+              <figure className={`gallery__item gallery__item--${index+1}`}><img src={img?.src} alt={`Gallery image ${index+1}`} className="gallery__img" /></figure>
             )}
           </div>
         </div>
